@@ -248,16 +248,10 @@ npm run lint
 - [ ] Dark mode
 - [ ] Unit tests và E2E tests
 
-## 👨‍💻 Hỗ trợ
-
-Nếu có vấn đề hoặc câu hỏi, vui lòng tạo issue trong repository.
-
 ## 📄 License
 
 MIT License
 
 ---
-
-**Phát triển bởi:** Student Management System Team  
 **Ngày cập nhật:** 2024  
 **Phiên bản:** 1.0.0
