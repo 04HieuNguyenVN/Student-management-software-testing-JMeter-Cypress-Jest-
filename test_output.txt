@@ -1,0 +1,4 @@
+﻿
+> student-management-system@0.0.0 test
+> jest
+
