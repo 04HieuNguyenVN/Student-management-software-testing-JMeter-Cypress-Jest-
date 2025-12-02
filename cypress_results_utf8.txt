@@ -1,0 +1,602 @@
+﻿
+> student-management-system@0.0.0 test:e2e:headless
+> cypress run
+
+
+npm : 
+At line:1 char:1
++ npm run 
+test:e2e:headless > 
+cypress_results.txt 
+2>&1
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (:String) [   
+ ], RemoteExceptio    
+n
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+DevTools listening on 
+ws://127.0.0.1:56753/d
+evtools/browser/ec8e0b
+66-bf7b-4c62-b2ef-06f0
+9fcd0be5
+
+====================================================================================================
+
+  (Run Starting)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Cypress:        14.5.4                                                                         Γöé
+  Γöé Browser:        Electron 130 (headless)                                                        Γöé
+  Γöé Node Version:   v18.20.8 (C:\nvm4w\nodejs\node.exe)                                            Γöé
+  Γöé Specs:          5 found (auth.cy.js, courses-classes.cy.js, dashboard-reports.cy.js, grades-en Γöé
+  Γöé                 rollment.cy.js, students.cy.js)                                                Γöé
+  Γöé Searched:       cypress/e2e/**/*.cy.{js,jsx,ts,tsx}                                            Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  auth.cy.js                                                                      (1 of 5)
+
+
+  Authentication
+    Login Page
+      1) should display login form
+      2) should show error on empty credentials
+      ΓêÜ should show error on invalid credentials (882ms)
+    Admin Login
+      3) should login successfully as admin
+      ΓêÜ should logout successfully (914ms)
+    Teacher Login
+      4) should login successfully as teacher
+    Student Login
+      5) should login successfully as student
+    Session Persistence
+      6) should persist login session after page reload
+    Protected Routes
+      ΓêÜ should redirect to login when accessing protected route without auth (285ms)
+      7) should prevent student from accessing admin routes
+      8) should prevent teacher from accessing admin-only routes
+
+
+  3 passing (43s)
+  8 failing
+
+  1) Authentication
+       Login Page
+         should display login form:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `h2`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:13:19)
+
+  2) Authentication
+       Login Page
+         should show error on empty credentials:
+     AssertionError: Timed out retrying after 4000ms: expected '<input.pl-10.w-full.px-4.py-2.border.border-gray-300.rounded-lg.focus:ring-2.focus:ring-blue-500.focus:border-transparent>' to have attribute 'required'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:21:35)
+
+  3) Authentication
+       Admin Login
+         should login successfully as admin:
+     AssertionError: Timed out retrying after 4000ms: expected '<nav.p-4>' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:43:20)
+
+  4) Authentication
+       Teacher Login
+         should login successfully as teacher:
+     AssertionError: Timed out retrying after 4000ms: expected '<nav.p-4>' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:67:20)
+
+  5) Authentication
+       Student Login
+         should login successfully as student:
+     AssertionError: Timed out retrying after 4000ms: expected '<nav.p-4>' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:86:20)
+
+  6) Authentication
+       Session Persistence
+         should persist login session after page reload:
+     AssertionError: Timed out retrying after 4000ms: expected '<nav.p-4>' to contain 'Sinh vi├¬n'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:110:20)
+
+  7) Authentication
+       Protected Routes
+         should prevent student from accessing admin routes:
+     AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:5173/students' to not include '/students'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:127:15)
+
+  8) Authentication
+       Protected Routes
+         should prevent teacher from accessing admin-only routes:
+     AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:5173/settings' to not include '/settings'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:137:15)
+
+
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        11                                                                               Γöé
+  Γöé Passing:      3                                                                                Γöé
+  Γöé Failing:      8                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      0                                                                                Γöé
+  Γöé Screenshots:  8                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     42 seconds                                                                       Γöé
+  Γöé Spec Ran:     auth.cy.js                                                                       Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Authentication -- Login Page -- should display login form (failed).png                    
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Authentication -- Login Page -- should show error on empty credentials (fai               
+     led).png                                                                                       
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Authentication -- Admin Login -- should login successfully as admin (failed               
+     ).png                                                                                          
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Authentication -- Teacher Login -- should login successfully as teacher (fa               
+     iled).png                                                                                      
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Authentication -- Student Login -- should login successfully as student (fa               
+     iled).png                                                                                      
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Authentication -- Session Persistence -- should persist login session after               
+      page reload (failed).png                                                                      
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Authentication -- Protected Routes -- should prevent student from accessing               
+      admin routes (failed).png                                                                     
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Authentication -- Protected Routes -- should prevent teacher from accessing               
+      admin-only routes (failed).png                                                                
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  courses-classes.cy.js                                                           (2 of 5)
+
+
+  Course Management
+    Course List View
+      1) "before each" hook for "should display courses page"
+
+  Class Management
+    Class List View
+      2) "before each" hook for "should display classes page"
+
+  Teacher Access to Courses
+    3) should allow teacher to view courses
+    4) should allow teacher to view classes
+
+
+  0 passing (21s)
+  4 failing
+
+  1) Course Management
+       Course List View
+         "before each" hook for "should display courses page":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'M├┤n hß╗ìc' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Course Management`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  2) Class Management
+       Class List View
+         "before each" hook for "should display classes page":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Lß╗¢p hß╗ìc' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Class Management`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  3) Teacher Access to Courses
+       should allow teacher to view courses:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `table`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/courses-classes.cy.js:117:20)
+
+  4) Teacher Access to Courses
+       should allow teacher to view classes:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `table`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/courses-classes.cy.js:123:20)
+
+
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        12                                                                               Γöé
+  Γöé Passing:      0                                                                                Γöé
+  Γöé Failing:      4                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      8                                                                                Γöé
+  Γöé Screenshots:  4                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     20 seconds                                                                       Γöé
+  Γöé Spec Ran:     courses-classes.cy.js                                                            Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\course     (1280x720)
+     s-classes.cy.js\Course Management -- should display courses page -- before each                
+     hook (failed).png                                                                              
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\course     (1280x720)
+     s-classes.cy.js\Class Management -- should display classes page -- before each h               
+     ook (failed).png                                                                               
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\course     (1280x720)
+     s-classes.cy.js\Teacher Access to Courses -- should allow teacher to view course               
+     s (failed).png                                                                                 
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\course     (1280x720)
+     s-classes.cy.js\Teacher Access to Courses -- should allow teacher to view classe               
+     s (failed).png                                                                                 
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  dashboard-reports.cy.js                                                         (3 of 5)
+
+
+  Dashboard
+    Admin Dashboard
+      1) should display admin dashboard with statistics
+      2) should display summary cards
+      ΓêÜ should display charts or graphs (759ms)
+    Teacher Dashboard
+      3) should display teacher dashboard
+      ΓêÜ should show teacher-specific information (883ms)
+    Student Dashboard
+      4) should display student dashboard
+      5) should show student GPA and academic info
+
+  Reports
+    Reports Page
+      6) should display reports page
+      ΓêÜ should have report type selector (1186ms)
+    Student Reports
+      7) should generate student list report
+      8) should filter by department
+      9) should filter by class
+    Grade Reports
+      10) should generate grade summary report
+      ΓêÜ should show statistics (1190ms)
+    Export Reports
+      ΓêÜ should have export buttons (1074ms)
+
+  Settings
+    11) should display settings page for admin only
+    ΓêÜ should display settings tabs (1196ms)
+    ΓêÜ should allow updating settings (1190ms)
+
+  Navigation
+    12) should navigate between pages using sidebar
+    13) should highlight active menu item
+
+
+  7 passing (1m)
+  13 failing
+
+  1) Dashboard
+       Admin Dashboard
+         should display admin dashboard with statistics:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:13:19)
+
+  2) Dashboard
+       Admin Dashboard
+         should display summary cards:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Tß╗òng sß╗æ' within the element: <div.ml-3> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:18:40)
+
+  3) Dashboard
+       Teacher Dashboard
+         should display teacher dashboard:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:35:19)
+
+  4) Dashboard
+       Student Dashboard
+         should display student dashboard:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:51:19)
+
+  5) Dashboard
+       Student Dashboard
+         should show student GPA and academic info:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'GPA' within the element: <div.flex.justify-between.border-b.pb-2> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:55:36)
+
+  6) Reports
+       Reports Page
+         should display reports page:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'B├ío c├ío v├á Thß╗æng k├¬'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:70:19)
+
+  7) Reports
+       Student Reports
+         should generate student list report:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Danh s├ích sinh vi├¬n' within the element: <button.px-4.py-2.rounded-lg.flex.items-center.space-x-2.whitespace-nowrap.bg-gray-200.text-gray-700.hover:bg-gray-300> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:80:44)
+
+  8) Reports
+       Student Reports
+         should filter by department:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:89:9)
+
+  9) Reports
+       Student Reports
+         should filter by class:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:94:25)
+
+  10) Reports
+       Grade Reports
+         should generate grade summary report:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'B├ío c├ío ─æiß╗âm' within the element: <button.px-4.py-2.rounded-lg.flex.items-center.space-x-2.whitespace-nowrap.bg-gray-200.text-gray-700.hover:bg-gray-300> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:104:43)
+
+  11) Settings
+       should display settings page for admin only:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'C├ái ─æß║╖t Hß╗ç thß╗æng'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:137:17)
+
+  12) Navigation
+       should navigate between pages using sidebar:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sinh vi├¬n' within the element: <nav.p-4> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  13) Navigation
+       should highlight active menu item:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sinh vi├¬n' within the element: <nav.p-4> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        20                                                                               Γöé
+  Γöé Passing:      7                                                                                Γöé
+  Γöé Failing:      13                                                                               Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      0                                                                                Γöé
+  Γöé Screenshots:  13                                                                               Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     1 minute, 15 seconds                                                             Γöé
+  Γöé Spec Ran:     dashboard-reports.cy.js                                                          Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Admin Dashboard -- should display admin dashboard               
+      with statistics (failed).png                                                                  
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Admin Dashboard -- should display summary cards (               
+     failed).png                                                                                    
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Teacher Dashboard -- should display teacher dashb               
+     oard (failed).png                                                                              
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Student Dashboard -- should display student dashb               
+     oard (failed).png                                                                              
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Student Dashboard -- should show student GPA and                
+     academic info (failed).png                                                                     
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Reports -- Reports Page -- should display reports page (failed               
+     ).png                                                                                          
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Reports -- Student Reports -- should generate student list rep               
+     ort (failed).png                                                                               
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Reports -- Student Reports -- should filter by department (fai               
+     led).png                                                                                       
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Reports -- Student Reports -- should filter by class (failed).               
+     png                                                                                            
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Reports -- Grade Reports -- should generate grade summary repo               
+     rt (failed).png                                                                                
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Settings -- should display settings page for admin only (faile               
+     d).png                                                                                         
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Navigation -- should navigate between pages using sidebar (fai               
+     led).png                                                                                       
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Navigation -- should highlight active menu item (failed).png                 
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  grades-enrollment.cy.js                                                         (4 of 5)
+
+
+  Grades Management
+    Grades List View
+      1) "before each" hook for "should display grades page"
+
+  Student Grade View
+    2) "before each" hook for "should display student grades"
+
+  Enrollment Management
+    Enrollment List View
+      ΓêÜ should display enrollment page (1161ms)
+      ΓêÜ should display enrollment table (1173ms)
+    Add Enrollment
+      ΓêÜ should open enrollment form (1253ms)
+      ΓêÜ should register student for course (2007ms)
+    Filter Enrollments
+      3) should filter by student
+      4) should filter by semester
+
+  Student Enrollment View
+    ΓêÜ should display available courses for enrollment (1226ms)
+    ΓêÜ should display enrolled courses (1228ms)
+
+  Teacher Grades Access
+    5) "before each" hook for "should allow teacher to view grades"
+
+
+  6 passing (34s)
+  5 failing
+
+  1) Grades Management
+       Grades List View
+         "before each" hook for "should display grades page":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: '─Éiß╗âm' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Grades Management`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  2) Student Grade View
+       "before each" hook for "should display student grades":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: '─Éiß╗âm cß╗ºa t├┤i' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Student Grade View`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  3) Enrollment Management
+       Filter Enrollments
+         should filter by student:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/grades-enrollment.cy.js:135:9)
+
+  4) Enrollment Management
+       Filter Enrollments
+         should filter by semester:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/grades-enrollment.cy.js:141:25)
+
+  5) Teacher Grades Access
+       "before each" hook for "should allow teacher to view grades":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: '─Éiß╗âm' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Teacher Grades Access`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        21                                                                               Γöé
+  Γöé Passing:      6                                                                                Γöé
+  Γöé Failing:      5                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      10                                                                               Γöé
+  Γöé Screenshots:  5                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     34 seconds                                                                       Γöé
+  Γöé Spec Ran:     grades-enrollment.cy.js                                                          Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Grades Management -- should display grades page -- before each               
+      hook (failed).png                                                                             
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Student Grade View -- should display student grades -- before                
+     each hook (failed).png                                                                         
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Enrollment Management -- Filter Enrollments -- should filter b               
+     y student (failed).png                                                                         
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Enrollment Management -- Filter Enrollments -- should filter b               
+     y semester (failed).png                                                                        
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Teacher Grades Access -- should allow teacher to view grades -               
+     - before each hook (failed).png                                                                
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  students.cy.js                                                                  (5 of 5)
+
+
+  Student Management
+    Student List View
+      1) "before each" hook for "should display student list page"
+
+
+  0 passing (5s)
+  1 failing
+
+  1) Student Management
+       Student List View
+         "before each" hook for "should display student list page":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sinh vi├¬n' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Student Management`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        14                                                                               Γöé
+  Γöé Passing:      0                                                                                Γöé
+  Γöé Failing:      1                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      13                                                                               Γöé
+  Γöé Screenshots:  1                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     5 seconds                                                                        Γöé
+  Γöé Spec Ran:     students.cy.js                                                                   Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Student Management -- should display student list page -- before each h               
+     ook (failed).png                                                                               
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé ├ù  auth.cy.js                               00:42       11        3        8        -        - Γöé
+  Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+  Γöé ├ù  courses-classes.cy.js                    00:20       12        -        4        -        8 Γöé
+  Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+  Γöé ├ù  dashboard-reports.cy.js                  01:15       20        7       13        -        - Γöé
+  Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+  Γöé ├ù  grades-enrollment.cy.js                  00:34       21        6        5        -       10 Γöé
+  Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+  Γöé ├ù  students.cy.js                           00:05       14        -        1        -       13 Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+    ├ù  5 of 5 failed (100%)                     02:58       78       16       31        -       31  
+

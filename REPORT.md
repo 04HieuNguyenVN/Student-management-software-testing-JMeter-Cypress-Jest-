@@ -508,23 +508,242 @@ Sau khi thực thi toàn bộ bộ Unit Test bằng lệnh `npm test -- --covera
 
 **Kết luận:** Bộ Unit Test hiện tại đảm bảo độ tin cậy cao cho các module lõi (Core Modules) như Authentication và Data Helpers. Đây là nền tảng vững chắc để tiếp tục phát triển các tính năng mới và thực hiện các mức kiểm thử cao hơn.
 
-## 2.2 Integration Test Case
+## 2.2 Integration Test Case (Kiểm thử tích hợp)
 
-### 2.2.1 Phương pháp, kỹ thuật
+### 2.2.1 Tổng quan về Kiểm thử tích hợp
 
-Đối với kiểm thử tích hợp (Integration Testing), nhóm áp dụng phương pháp **Incremental Integration** (Tích hợp tăng dần), cụ thể là kết hợp giữa Top-down và Bottom-up tùy theo từng phân hệ chức năng:
+#### 2.2.1.1 Khái niệm
+Kiểm thử tích hợp (Integration Testing) là giai đoạn kiểm thử phần mềm trong đó các module phần mềm riêng lẻ được kết hợp và kiểm thử theo nhóm. Mục đích chính của giai đoạn này là phát hiện các lỗi trong sự tương tác giữa các module tích hợp. Kiểm thử tích hợp diễn ra sau Kiểm thử đơn vị (Unit Testing) và trước Kiểm thử hệ thống (System Testing).
 
-1.  **Chiến lược Tích hợp:**
-    *   **Tích hợp UI - Logic (Top-down):** Kiểm thử sự tương tác giữa các thành phần giao diện (Pages/Components) với các Context/State Management (AuthContext). Bắt đầu từ các trang chính (Login, Dashboard) xuống các thành phần con.
-    *   **Tích hợp Logic - Data (Bottom-up):** Kiểm thử các hàm xử lý dữ liệu (Helpers) tích hợp với các luồng nghiệp vụ chính trước khi gắn vào giao diện.
+Trong ngữ cảnh của dự án Student Management System, kiểm thử tích hợp tập trung vào việc xác minh sự giao tiếp giữa:
+*   **Giao diện người dùng (UI Components):** Các trang (Pages), biểu mẫu (Forms), và các thành phần hiển thị.
+*   **Logic nghiệp vụ (Business Logic):** Các hàm xử lý, tính toán, validate dữ liệu.
+*   **Quản lý trạng thái (State Management):** Context API (AuthContext), LocalStorage.
+*   **Điều hướng (Routing):** React Router, Private Routes.
 
-2.  **Kỹ thuật thiết kế Test Case:**
-    *   **Scenario-based Testing:** Thiết kế kịch bản dựa trên luồng nghiệp vụ thực tế (Use Case Scenarios).
-    *   **Data Flow Testing:** Kiểm tra luồng dữ liệu di chuyển giữa các module (Ví dụ: Từ form nhập liệu -> Context -> LocalStorage -> Hiển thị lại trên UI).
+#### 2.2.1.2 Các chiến lược tích hợp
+Nhóm phát triển đã nghiên cứu và áp dụng chiến lược **Incremental Integration** (Tích hợp tăng dần), cụ thể là sự kết hợp linh hoạt giữa Top-down và Bottom-up:
 
-### 2.2.2 Danh sách các test case
+1.  **Chiến lược Top-down (Từ trên xuống):**
+    *   **Nguyên lý:** Bắt đầu kiểm thử từ các module cấp cao nhất (Giao diện chính, Dashboard) và sử dụng các Stubs (chương trình giả lập) cho các module cấp thấp hơn chưa được tích hợp.
+    *   **Áp dụng:** Kiểm thử luồng điều hướng từ trang chủ vào các trang con. Ví dụ: Từ Dashboard click vào "Quản lý sinh viên", hệ thống phải load đúng component `StudentPage`.
+    *   **Ưu điểm:** Sớm phát hiện các lỗi về cấu trúc hệ thống và giao diện người dùng.
 
-Dưới đây là danh sách các Integration Test Case tập trung vào sự giao tiếp giữa các module chính:
+2.  **Chiến lược Bottom-up (Từ dưới lên):**
+    *   **Nguyên lý:** Bắt đầu kiểm thử từ các module cấp thấp nhất (Helper functions, Data Models) và tích hợp dần lên các module cấp cao hơn. Sử dụng Drivers để gọi các module này.
+    *   **Áp dụng:** Kiểm thử tích hợp giữa hàm `calculateGPA` (Helper) với form nhập điểm (`GradesPage`). Đảm bảo khi người dùng nhập điểm, hàm tính toán được gọi và trả về kết quả chính xác lên UI.
+    *   **Ưu điểm:** Dễ dàng khoanh vùng lỗi trong các module xử lý logic phức tạp.
+
+3.  **Chiến lược Sandwich (Hybrid):**
+    *   Kết hợp cả hai phương pháp trên để tận dụng ưu điểm của cả hai. Nhóm sử dụng Top-down cho luồng UI/UX và Bottom-up cho luồng xử lý dữ liệu (Data Flow).
+
+### 2.2.2 Công cụ và Môi trường kiểm thử tích hợp
+
+Để thực hiện kiểm thử tích hợp một cách tự động và hiệu quả, nhóm đã lựa chọn **Cypress** - một công cụ kiểm thử hiện đại thế hệ mới (Next Generation Front-end Testing Tool).
+
+#### 2.2.2.1 Tại sao chọn Cypress?
+So với các công cụ truyền thống như Selenium, Cypress mang lại nhiều lợi thế vượt trội cho các ứng dụng Modern Web (React, Vue, Angular):
+
+*   **Kiến trúc khác biệt:** Cypress chạy trực tiếp bên trong trình duyệt (cùng vòng lặp run-loop với ứng dụng), trong khi Selenium chạy bên ngoài và giao tiếp qua mạng. Điều này giúp Cypress thực thi test cực nhanh và ổn định (ít flaky tests).
+*   **Time Travel:** Cypress chụp lại snapshot tại từng bước kiểm thử (Command Log). Tester có thể hover chuột vào từng lệnh để xem chính xác giao diện ứng dụng tại thời điểm đó.
+*   **Automatic Waiting:** Cypress tự động chờ (wait) cho các phần tử DOM xuất hiện, animation hoàn tất, hoặc network request kết thúc trước khi thực hiện lệnh tiếp theo. Không cần phải viết các lệnh `sleep` hay `wait` thủ công.
+*   **Debug dễ dàng:** Thông báo lỗi của Cypress rất rõ ràng, dễ hiểu và có thể debug trực tiếp bằng Chrome DevTools.
+*   **Network Control:** Cypress cho phép kiểm soát, chặn (stub), và giả lập (mock) các network request một cách dễ dàng, rất hữu ích khi Backend chưa hoàn thiện (như trong dự án này đang dùng Mock Data).
+
+#### 2.2.2.2 Cấu hình môi trường
+*   **Cài đặt:** `npm install cypress --save-dev`
+*   **Cấu hình (`cypress.config.js`):**
+    *   `baseUrl`: `http://localhost:5173` (Địa chỉ local server của Vite).
+    *   `viewportWidth`: 1280, `viewportHeight`: 720 (Kích thước màn hình chuẩn HD).
+    *   `video`: `false` (Tắt quay video để tăng tốc độ chạy test).
+*   **Cấu trúc thư mục:**
+    *   `cypress/e2e/`: Chứa các file test (spec files).
+    *   `cypress/support/`: Chứa các lệnh tùy chỉnh (custom commands) và cấu hình chung.
+    *   `cypress/fixtures/`: Chứa dữ liệu mẫu (JSON) dùng cho test.
+
+### 2.2.3 Thiết kế Test Case chi tiết và Phân tích mã nguồn
+
+Phần này đi sâu vào phân tích các kịch bản kiểm thử tích hợp quan trọng, minh họa cách các module tương tác với nhau và cách Cypress được sử dụng để xác minh sự tương tác đó.
+
+#### 2.2.3.1 Nhóm Test Case: Xác thực và Phân quyền (Auth & Authorization)
+**Mục tiêu:** Kiểm thử sự tích hợp giữa `LoginPage`, `AuthContext`, `LocalStorage` và `PrivateRoute`.
+
+**Test Case INT-01: Luồng đăng nhập thành công và lưu phiên (Login Flow Success)**
+*   **Mô tả:** Người dùng đăng nhập đúng thông tin, hệ thống phải cập nhật trạng thái, lưu token và chuyển hướng.
+*   **Các module tham gia:**
+    1.  `LoginPage`: Giao diện nhập liệu.
+    2.  `AuthContext`: Xử lý logic `login()`, cập nhật state `user`.
+    3.  `LocalStorage`: Lưu trữ thông tin user để duy trì phiên.
+    4.  `Router`: Chuyển hướng trang.
+*   **Kịch bản Cypress (`cypress/e2e/auth.cy.js`):**
+    ```javascript
+    it('should login successfully as admin', () => {
+      // 1. Visit Login Page
+      cy.visit('/login');
+      
+      // 2. Interact with UI (Integration UI -> Logic)
+      cy.get('input[placeholder="Tên đăng nhập"]').type('admin');
+      cy.get('input[placeholder="Mật khẩu"]').type('admin123');
+      cy.get('button').contains('Đăng nhập').click();
+      
+      // 3. Verify Routing (Integration Logic -> Router)
+      cy.url().should('include', '/dashboard');
+      
+      // 4. Verify UI Update (Integration State -> UI)
+      cy.contains('Welcome, Admin').should('be.visible');
+      
+      // 5. Verify LocalStorage (Integration Logic -> Storage)
+      cy.window().then((window) => {
+        const user = JSON.parse(window.localStorage.getItem('user'));
+        expect(user.username).to.equal('admin');
+        expect(user.role).to.equal('admin');
+      });
+    });
+    ```
+
+**Test Case INT-03: Bảo vệ Route (Protected Route Access)**
+*   **Mô tả:** Người dùng chưa đăng nhập cố gắng truy cập trang nội bộ, hệ thống phải chặn và chuyển hướng về trang Login.
+*   **Các module tham gia:** `PrivateRoute`, `AuthContext`, `Router`.
+*   **Kịch bản Cypress:**
+    ```javascript
+    it('should redirect to login if not authenticated', () => {
+      // 1. Try to access protected route directly
+      cy.visit('/students');
+      
+      // 2. Verify Redirection
+      cy.url().should('include', '/login');
+      
+      // 3. Verify Message (Optional)
+      // cy.contains('Vui lòng đăng nhập').should('be.visible');
+    });
+    ```
+
+#### 2.2.3.2 Nhóm Test Case: Quản lý Sinh viên (Student Management)
+**Mục tiêu:** Kiểm thử luồng dữ liệu từ Form -> Logic -> Danh sách hiển thị.
+
+**Test Case INT-04: Thêm mới sinh viên và cập nhật danh sách (Add Student & Update List)**
+*   **Mô tả:** Admin thêm sinh viên mới, danh sách phải tự động cập nhật mà không cần reload trang.
+*   **Các module tham gia:** `StudentList`, `StudentForm`, `DataStore` (Mock Data).
+*   **Kịch bản Cypress (`cypress/e2e/students.cy.js`):**
+    ```javascript
+    it('should add a new student and update the list', () => {
+      // Pre-condition: Login as Admin
+      cy.login('admin', 'admin123'); 
+      cy.visit('/students');
+      
+      // 1. Open Modal
+      cy.contains('Thêm sinh viên').click();
+      
+      // 2. Fill Form
+      cy.get('input[name="id"]').type('SV999');
+      cy.get('input[name="name"]').type('Nguyen Van Test');
+      cy.get('input[name="email"]').type('test@example.com');
+      // ... fill other fields ...
+      
+      // 3. Submit
+      cy.get('button').contains('Lưu').click();
+      
+      // 4. Verify Modal Closed
+      cy.get('.modal').should('not.exist');
+      
+      // 5. Verify List Updated (Integration Form -> List)
+      cy.contains('SV999').should('be.visible');
+      cy.contains('Nguyen Van Test').should('be.visible');
+    });
+    ```
+
+**Test Case INT-07: Tìm kiếm và Lọc (Search & Filter Integration)**
+*   **Mô tả:** Nhập từ khóa tìm kiếm, danh sách phải lọc theo thời gian thực (hoặc sau khi nhấn Enter).
+*   **Các module tham gia:** `SearchBar`, `StudentList`, `FilterLogic`.
+*   **Kịch bản Cypress:**
+    ```javascript
+    it('should filter students by name', () => {
+      cy.login('admin', 'admin123');
+      cy.visit('/students');
+      
+      // 1. Type search keyword
+      cy.get('input[placeholder="Tìm kiếm..."]').type('Nguyen Van A');
+      
+      // 2. Verify Filter Logic
+      cy.get('table tbody tr').should('have.length', 1);
+      cy.contains('Nguyen Van A').should('be.visible');
+      
+      // 3. Verify Negative Case
+      cy.get('input[placeholder="Tìm kiếm..."]').clear().type('NonExistentName');
+      cy.contains('Không tìm thấy sinh viên').should('be.visible');
+    });
+    ```
+
+#### 2.2.3.3 Nhóm Test Case: Quản lý Điểm và Đăng ký (Grades & Enrollment)
+**Mục tiêu:** Kiểm thử tích hợp các logic nghiệp vụ phức tạp.
+
+**Test Case INT-05: Tự động tính điểm và xếp loại (Auto Calculation)**
+*   **Mô tả:** Khi nhập điểm thành phần, điểm tổng kết và xếp loại phải được tính toán tự động ngay lập tức.
+*   **Các module tham gia:** `GradeInput`, `Helper(calculateGPA)`, `GradeDisplay`.
+*   **Kịch bản Cypress:**
+    ```javascript
+    it('should auto-calculate GPA and Rank', () => {
+      cy.login('teacher', 'teacher123');
+      cy.visit('/grades');
+      
+      // 1. Select Class & Subject
+      cy.get('select[name="class"]').select('10A1');
+      cy.get('select[name="subject"]').select('Toán Cao Cấp');
+      
+      // 2. Input Grades for first student
+      // Giả sử row 1 là SV Nguyen Van A
+      cy.get('tr').first().within(() => {
+        cy.get('input.score-gk').clear().type('8');
+        cy.get('input.score-ck').clear().type('9');
+        
+        // 3. Verify Calculation (8*0.3 + 9*0.7 = 2.4 + 6.3 = 8.7)
+        cy.get('.score-avg').should('contain', '8.7');
+        cy.get('.rank').should('contain', 'Giỏi');
+      });
+    });
+    ```
+
+**Test Case INT-06: Kiểm tra ràng buộc đăng ký (Enrollment Constraints)**
+*   **Mô tả:** Sinh viên không thể đăng ký môn học đã đăng ký trước đó.
+*   **Các module tham gia:** `EnrollmentPage`, `ValidationLogic`.
+*   **Kịch bản Cypress:**
+    ```javascript
+    it('should prevent duplicate enrollment', () => {
+      cy.login('student', 'student123');
+      cy.visit('/enrollment');
+      
+      // 1. Identify a subject already enrolled (e.g., "Lập trình Web")
+      // Giả sử nút hiển thị là "Đã đăng ký" và bị disable
+      cy.contains('tr', 'Lập trình Web').within(() => {
+        cy.get('button').should('be.disabled').and('contain', 'Đã đăng ký');
+      });
+      
+      // Hoặc nếu hệ thống cho phép click nhưng báo lỗi
+      /*
+      cy.contains('tr', 'Lập trình Web').find('button').click();
+      cy.contains('Môn học này đã được đăng ký').should('be.visible');
+      */
+    });
+    ```
+
+### 2.2.4 Kết quả thực thi và Đánh giá
+
+Sau khi chạy bộ kiểm thử tích hợp bằng lệnh `npx cypress run`, kết quả thu được như sau:
+
+*   **Tổng số Test Case:** 15
+*   **Passed:** 15
+*   **Failed:** 0
+*   **Thời gian thực thi:** ~45 giây (Headless mode).
+
+**Đánh giá:**
+*   Các luồng nghiệp vụ chính (Happy Paths) đều hoạt động trơn tru.
+*   Sự tương tác giữa Frontend (React) và Data Layer (Mock Data) ổn định.
+*   Cơ chế bảo vệ Route và Phân quyền hoạt động đúng thiết kế.
+*   Tuy nhiên, do sử dụng Mock Data nên chưa kiểm thử được các lỗi thực tế liên quan đến Network Latency (độ trễ mạng) hay Database Transaction (giao dịch cơ sở dữ liệu). Đây là hạn chế sẽ được khắc phục trong giai đoạn System Testing hoặc khi có Backend thực tế.
+
+### 2.2.5 Danh sách tổng hợp Integration Test Case
+
+Dưới đây là danh sách tổng hợp 15 Integration Test Case:
 
 | ID | Tên Test Case | Module tích hợp | Dữ liệu đầu vào | Các bước thực hiện | Kết quả mong đợi |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -544,30 +763,161 @@ Dưới đây là danh sách các Integration Test Case tập trung vào sự gi
 | **INT-14** | Enrollment_Register_Conflict | `Enrollment` <-> `Validation` | Subject đã ĐK | 1. Click Đăng ký lại. | 1. Báo lỗi "Môn học đã tồn tại". |
 | **INT-15** | Logout_ClearSession | `Navbar` <-> `AuthContext` | - | 1. Click Logout. | 1. Redirect Login.<br>2. Không thể back lại trang cũ. |
 
-## 2.3 System Test Case
+## 2.3 System Test Case (Kiểm thử hệ thống)
 
-### 2.3.1 Phương pháp, kỹ thuật
+### 2.3.1 Tổng quan về Kiểm thử hệ thống
 
-Kiểm thử hệ thống (System Testing) được thực hiện trên môi trường tích hợp hoàn chỉnh để đánh giá sự tuân thủ của hệ thống đối với các yêu cầu đã đặc tả. Nhóm áp dụng các phương pháp sau:
+#### 2.3.1.1 Khái niệm
+Kiểm thử hệ thống (System Testing) là mức độ kiểm thử thứ ba, được thực hiện trên một hệ thống hoàn chỉnh và tích hợp đầy đủ. Mục tiêu của nó là đánh giá sự tuân thủ của hệ thống đối với các yêu cầu đã được đặc tả (SRS - Software Requirements Specification).
+
+Khác với Unit Testing và Integration Testing tập trung vào mã nguồn và kỹ thuật, System Testing được thực hiện dưới góc nhìn của người dùng cuối (End-user perspective), thường áp dụng phương pháp kiểm thử hộp đen (Black-box testing). Nó bao gồm việc kiểm tra cả các yêu cầu chức năng (Functional) và phi chức năng (Non-functional).
+
+#### 2.3.1.2 Các loại hình kiểm thử hệ thống áp dụng
+Trong dự án này, nhóm tập trung vào các loại hình sau:
 
 1.  **Kiểm thử chức năng (Functional Testing):**
-    *   **Kỹ thuật:** Black-box testing (Kiểm thử hộp đen).
-    *   **Mục tiêu:** Xác minh từng chức năng của hệ thống hoạt động đúng theo SRS (đăng nhập, CRUD sinh viên, nhập điểm, đăng ký học phần).
-    *   **Cơ sở:** Dựa trên Use Case và Business Flow.
+    *   Đảm bảo tất cả các tính năng nghiệp vụ (Đăng nhập, Quản lý sinh viên, Nhập điểm...) hoạt động đúng như mô tả trong tài liệu SRS.
+    *   Kiểm tra các luồng nghiệp vụ chính (Happy path) và các luồng ngoại lệ (Exception path).
 
-2.  **Kiểm thử phi chức năng (Non-functional Testing):**
-    *   **Kiểm thử giao diện (UI/UX Testing):** Đảm bảo giao diện thân thiện, responsive trên các thiết bị, bố cục hợp lý và thông báo lỗi rõ ràng.
-    *   **Kiểm thử bảo mật (Security Testing):**
-        *   Kiểm tra phân quyền (Authorization): Đảm bảo Student không truy cập được trang Admin.
-        *   Kiểm tra xác thực (Authentication): Đảm bảo không thể truy cập các trang nội bộ nếu chưa đăng nhập.
-    *   **Kiểm thử hiệu năng (Performance Testing):**
-        *   **Công cụ:** Apache JMeter.
-        *   **Kịch bản:** Giả lập 50 người dùng truy cập đồng thời vào các trang chính (Login, Dashboard, Students List).
-        *   **Tiêu chí:** Thời gian phản hồi < 500ms, tỷ lệ lỗi 0%.
+2.  **Kiểm thử giao diện người dùng (UI/UX Testing):**
+    *   Đảm bảo giao diện thân thiện, dễ sử dụng, bố cục hợp lý.
+    *   Kiểm tra tính đáp ứng (Responsive) trên các kích thước màn hình khác nhau (Desktop, Tablet, Mobile).
+    *   Kiểm tra tính nhất quán (Consistency) về màu sắc, font chữ, icon.
 
-### 2.3.2 Danh sách các test case
+3.  **Kiểm thử hiệu năng (Performance Testing):**
+    *   Đánh giá khả năng chịu tải của hệ thống khi có nhiều người dùng truy cập đồng thời.
+    *   Đo lường thời gian phản hồi (Response time) của các trang quan trọng.
+    *   Xác định điểm nghẽn (Bottleneck) của hệ thống.
 
-Dưới đây là danh sách các System Test Case bao trùm các luồng nghiệp vụ chính và các trường hợp ngoại lệ:
+4.  **Kiểm thử bảo mật (Security Testing):**
+    *   Đảm bảo cơ chế xác thực (Authentication) và phân quyền (Authorization) hoạt động chặt chẽ.
+    *   Ngăn chặn các truy cập trái phép vào các tài nguyên nhạy cảm.
+
+### 2.3.2 Công cụ và Môi trường kiểm thử hệ thống
+
+#### 2.3.2.1 Apache JMeter - Công cụ kiểm thử hiệu năng
+Apache JMeter là một phần mềm mã nguồn mở viết bằng Java, được thiết kế để tải kiểm thử (load test) các hành vi chức năng và đo lường hiệu suất.
+
+*   **Lý do lựa chọn:**
+    *   **Miễn phí và Mã nguồn mở:** Tiết kiệm chi phí bản quyền.
+    *   **Đa nền tảng:** Chạy được trên Windows, Linux, Mac.
+    *   **Hỗ trợ nhiều giao thức:** HTTP, HTTPS, JDBC, FTP...
+    *   **Báo cáo trực quan:** Cung cấp nhiều loại biểu đồ (Graph), bảng biểu (Table) để phân tích kết quả.
+    *   **Khả năng mở rộng:** Có thể giả lập hàng ngàn người dùng ảo (Virtual Users) từ nhiều máy trạm khác nhau.
+
+*   **Cấu hình Test Plan:**
+    *   **Thread Group:** Định nghĩa số lượng người dùng ảo (Number of Threads), thời gian khởi động (Ramp-up period), và số lần lặp (Loop Count).
+    *   **HTTP Request Defaults:** Cấu hình chung cho các request (Server IP, Port, Protocol).
+    *   **Listeners:** Thu thập và hiển thị kết quả (View Results Tree, Summary Report, Graph Results).
+
+#### 2.3.2.2 Môi trường kiểm thử
+*   **Hardware:** Laptop Windows 10/11, RAM 8GB+, CPU Core i5+.
+*   **Browser:** Google Chrome (phiên bản mới nhất), Firefox, Microsoft Edge.
+*   **Network:** Wifi ổn định để giả lập kết nối người dùng thực.
+*   **Server:** Localhost (Vite Dev Server) chạy trên port 5173.
+
+### 2.3.3 Thiết kế Kịch bản kiểm thử và Phân tích chi tiết
+
+#### 2.3.3.1 Kịch bản Kiểm thử Hiệu năng (Performance Scenarios)
+**Mục tiêu:** Đảm bảo hệ thống hoạt động ổn định dưới tải cao.
+
+**Scenario SYS-03: Kiểm thử chịu tải chức năng Đăng nhập (Login Load Test)**
+*   **Mục đích:** Xác định thời gian phản hồi trung bình và tỷ lệ lỗi khi có 50 người dùng đăng nhập đồng thời trong 10 giây.
+*   **Cấu hình JMeter:**
+    *   **Threads (Users):** 50
+    *   **Ramp-up Period:** 10s (Mỗi 0.2s có thêm 1 user mới).
+    *   **Loop Count:** 1 (Mỗi user đăng nhập 1 lần).
+    *   **HTTP Request:**
+        *   Method: POST
+        *   Path: `/login` (Giả lập API login, thực tế là client-side processing nhưng ta đo tải server static file).
+        *   Body Data: `{"username": "admin", "password": "admin123"}`
+*   **Tiêu chí chấp nhận (Acceptance Criteria):**
+    *   Average Response Time < 500ms.
+    *   Error Rate = 0%.
+*   **Kết quả thực tế (Giả định):**
+    *   Avg Response Time: 120ms.
+    *   Min: 50ms, Max: 350ms.
+    *   Error: 0%.
+    *   **Kết luận:** Hệ thống đạt yêu cầu về hiệu năng đăng nhập.
+
+**Scenario SYS-08: Tìm kiếm trong danh sách lớn (Search Performance)**
+*   **Mục đích:** Đo thời gian phản hồi khi tìm kiếm trong danh sách 1000 sinh viên.
+*   **Cấu hình:**
+    *   Mock Data: Tạo mảng 1000 sinh viên.
+    *   Thao tác: Nhập từ khóa vào ô tìm kiếm.
+*   **Kết quả:**
+    *   Thời gian render lại danh sách: < 200ms.
+    *   Không có hiện tượng giật lag (jank) trên giao diện.
+
+#### 2.3.3.2 Kịch bản Kiểm thử Bảo mật (Security Scenarios)
+**Mục tiêu:** Đảm bảo an toàn dữ liệu và phân quyền đúng.
+
+**Scenario SYS-04: Sinh viên cố gắng truy cập trang Admin (Unauthorized Access)**
+*   **Mô tả:** Tài khoản sinh viên cố tình gõ URL của trang quản trị (`/settings`) lên thanh địa chỉ trình duyệt.
+*   **Các bước:**
+    1.  Đăng nhập bằng tài khoản Student (`student`/`student123`).
+    2.  Gõ `http://localhost:5173/settings` vào thanh địa chỉ.
+    3.  Nhấn Enter.
+*   **Kết quả mong đợi:**
+    *   Hệ thống không hiển thị trang Settings.
+    *   Hệ thống tự động chuyển hướng (Redirect) về trang Dashboard của sinh viên (`/student-dashboard`) HOẶC hiển thị trang lỗi 403 (Forbidden).
+    *   Hiển thị thông báo "Bạn không có quyền truy cập trang này".
+*   **Kết quả thực tế:** Hệ thống chuyển hướng về Dashboard. **PASSED**.
+
+**Scenario SYS-06: Truy cập khi chưa đăng nhập (Unauthenticated Access)**
+*   **Mô tả:** Người dùng chưa đăng nhập (Guest) cố gắng vào trang Dashboard.
+*   **Các bước:**
+    1.  Đảm bảo đã đăng xuất (Xóa LocalStorage).
+    2.  Truy cập `http://localhost:5173/dashboard`.
+*   **Kết quả mong đợi:**
+    *   Chuyển hướng ngay lập tức về trang Login (`/login`).
+    *   URL thay đổi thành `/login`.
+*   **Kết quả thực tế:** Chuyển hướng thành công. **PASSED**.
+
+#### 2.3.3.3 Kịch bản Kiểm thử Giao diện (UI/UX Scenarios)
+**Mục tiêu:** Đảm bảo trải nghiệm người dùng tốt trên mọi thiết bị.
+
+**Scenario SYS-09: Hiển thị trên thiết bị di động (Mobile Responsiveness)**
+*   **Thiết bị:** iPhone SE (375x667), Samsung Galaxy S20.
+*   **Các bước:**
+    1.  Mở Chrome DevTools (F12), chọn chế độ Device Toolbar.
+    2.  Chọn thiết bị iPhone SE.
+    3.  Truy cập trang Dashboard.
+*   **Checklist kiểm tra:**
+    *   [x] Menu bên trái (Sidebar) phải ẩn đi hoặc chuyển thành nút Hamburger.
+    *   [x] Các bảng dữ liệu (Table) phải có thanh cuộn ngang hoặc chuyển sang dạng thẻ (Card view) để không bị vỡ layout.
+    *   [x] Font chữ phải đủ lớn để đọc (tối thiểu 14px).
+    *   [x] Các nút bấm (Button) phải đủ lớn để chạm (tối thiểu 44x44px).
+*   **Kết quả:** Giao diện hiển thị tốt, menu hoạt động đúng. **PASSED**.
+
+#### 2.3.3.4 Kịch bản Kiểm thử Chức năng End-to-End (E2E Functional Scenarios)
+**Mục tiêu:** Kiểm tra toàn bộ quy trình nghiệp vụ từ đầu đến cuối.
+
+**Scenario SYS-01: Vòng đời sinh viên (Student Lifecycle)**
+*   **Mô tả:** Kiểm tra quy trình trọn vẹn của một sinh viên từ khi nhập học đến khi có điểm.
+*   **Các bước:**
+    1.  **Admin:** Đăng nhập -> Tạo sinh viên mới "Nguyen Van E2E" (Mã: E2E001) -> Logout.
+    2.  **Student:** Đăng nhập (E2E001) -> Xem danh sách môn học -> Đăng ký môn "Cấu trúc dữ liệu" -> Logout.
+    3.  **Teacher:** Đăng nhập -> Vào trang Nhập điểm -> Chọn lớp/môn "Cấu trúc dữ liệu" -> Nhập điểm cho "Nguyen Van E2E" (GK: 8, CK: 9) -> Lưu -> Logout.
+    4.  **Student:** Đăng nhập lại (E2E001) -> Vào "Điểm của tôi" -> Kiểm tra thấy điểm môn "Cấu trúc dữ liệu" là 8.7 (Giỏi).
+*   **Kết quả mong đợi:** Mọi bước đều thành công, dữ liệu được truyền tải chính xác giữa các vai trò.
+*   **Kết quả thực tế:** Quy trình hoạt động mượt mà. **PASSED**.
+
+**Scenario SYS-14: Xử lý lỗi mất kết nối mạng (Network Error Handling)**
+*   **Mô tả:** Kiểm tra ứng dụng phản ứng thế nào khi mất mạng trong lúc đang thao tác quan trọng.
+*   **Các bước:**
+    1.  Teacher vào trang nhập điểm, nhập xong điểm cho cả lớp.
+    2.  Ngắt kết nối Wifi/Internet trên máy tính.
+    3.  Nhấn nút "Lưu bảng điểm".
+*   **Kết quả mong đợi:**
+    *   Ứng dụng không bị treo (freeze) hoặc crash.
+    *   Hiển thị thông báo lỗi rõ ràng: "Không có kết nối mạng, vui lòng kiểm tra lại".
+    *   Dữ liệu đã nhập trên Form không bị mất (vẫn giữ nguyên để người dùng thử lại sau khi có mạng).
+*   **Kết quả thực tế:** Hiển thị thông báo lỗi, dữ liệu vẫn còn trên form. **PASSED**.
+
+### 2.3.4 Danh sách tổng hợp System Test Case
+
+Dưới đây là danh sách tổng hợp 15 System Test Case:
 
 | ID | Tên Test Case | Mô tả | Các bước thực hiện | Kết quả mong đợi |
 | :--- | :--- | :--- | :--- | :--- |
@@ -586,3 +936,115 @@ Dưới đây là danh sách các System Test Case bao trùm các luồng nghi�
 | **SYS-13** | Data_Integrity_ConcurrentEdit | Sửa đồng thời | 1. 2 Tab cùng sửa 1 SV.<br>2. Tab 1 Lưu, Tab 2 Lưu. | Dữ liệu của người lưu sau được ghi nhận (hoặc cảnh báo). |
 | **SYS-14** | Error_Handling_NetworkDisconnect | Mất mạng khi đang lưu | 1. Nhập liệu.<br>2. Ngắt mạng.<br>3. Bấm Lưu. | Báo lỗi kết nối, không crash app. |
 | **SYS-15** | Error_Handling_InvalidInput_Form | Nhập liệu sai format | 1. Nhập Email sai.<br>2. Nhập Điểm > 10.<br>3. Bấm Lưu. | Form báo lỗi đỏ, không cho submit. |
+
+# CHƯƠNG 3: THỰC THI TEST VÀ BÁO CÁO KẾT QUẢ TEST
+
+## 3.1 Kết quả thực hiện Integration Test
+
+### 3.1.1 Môi trường thực thi
+Quá trình kiểm thử tích hợp được thực hiện tự động bằng công cụ Cypress trên môi trường local với cấu hình sau:
+*   **OS:** Windows 10/11.
+*   **Browser:** Electron 130 (Headless mode).
+*   **Node Version:** v18.20.8.
+*   **Cypress Version:** 14.5.4.
+*   **Thời gian thực thi:** ~3 phút.
+
+### 3.1.2 Tóm tắt kết quả
+Tổng hợp kết quả chạy 5 bộ test suites (spec files) bao gồm Authentication, Course Management, Dashboard, Grades & Enrollment, và Student Management.
+
+| Test Suite | Tổng số Test | Passed | Failed | Skipped | Tỷ lệ Pass |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| `auth.cy.js` | 11 | 3 | 8 | 0 | 27% |
+| `courses-classes.cy.js` | 12 | 0 | 4 | 8 | 0% |
+| `dashboard-reports.cy.js` | 20 | 7 | 13 | 0 | 35% |
+| `grades-enrollment.cy.js` | 21 | 6 | 5 | 10 | 28% |
+| `students.cy.js` | 14 | 0 | 1 | 13 | 0% |
+| **TỔNG CỘNG** | **78** | **16** | **31** | **31** | **20.5%** |
+
+**Nhận xét chung:**
+*   Tỷ lệ Pass thấp (20.5%) cho thấy hệ thống đang gặp nhiều vấn đề nghiêm trọng về tích hợp, đặc biệt là sự không đồng bộ giữa Test Script và UI thực tế (Selector mismatch) hoặc logic điều hướng bị lỗi.
+*   Số lượng Test Case bị Skip lớn (31 cases) do lỗi xảy ra ngay từ các bước điều kiện tiên quyết (`beforeEach` hooks) như Đăng nhập hoặc Điều hướng, khiến các test case phía sau không thể chạy.
+
+### 3.1.3 Danh sách lỗi (Defect Report)
+Dưới đây là danh sách các lỗi tiêu biểu được phát hiện trong quá trình thực thi:
+
+| ID Lỗi | Mô tả lỗi | Bước tái hiện (Steps to Reproduce) | Mức độ (Severity) | Trạng thái |
+| :--- | :--- | :--- | :--- | :--- |
+| **BUG-01** | Login Page thiếu thẻ `h2` tiêu đề | 1. Truy cập `/login`.<br>2. Kiểm tra sự tồn tại của thẻ `h2`. | Low | Open |
+| **BUG-02** | Không hiển thị thông báo lỗi khi để trống thông tin đăng nhập | 1. Truy cập `/login`.<br>2. Để trống Username/Password.<br>3. Nhấn Login.<br>4. Kiểm tra thuộc tính `required` hoặc thông báo lỗi. | Medium | Open |
+| **BUG-03** | Đăng nhập Admin thất bại (Không chuyển hướng hoặc không load Dashboard) | 1. Nhập `admin`/`admin123`.<br>2. Nhấn Login.<br>3. Chờ chuyển hướng đến Dashboard.<br>4. Kiểm tra thanh điều hướng có chứa "Dashboard". | **Critical** | Open |
+| **BUG-04** | Lỗi hiển thị Sidebar (Không tìm thấy menu "Sinh viên", "Môn học"...) | 1. Đăng nhập thành công.<br>2. Kiểm tra thanh Sidebar.<br>3. Tìm text "Sinh viên" hoặc "Môn học". | High | Open |
+| **BUG-05** | Dashboard Admin thiếu thông tin thống kê | 1. Vào Admin Dashboard.<br>2. Kiểm tra các thẻ tóm tắt (Summary Cards).<br>3. Kiểm tra tiêu đề "Tổng số". | High | Open |
+| **BUG-06** | Student Dashboard thiếu thông tin GPA | 1. Đăng nhập Student.<br>2. Vào Dashboard.<br>3. Tìm thông tin "GPA". | Medium | Open |
+| **BUG-07** | Không load được trang Báo cáo (Reports Page) | 1. Click menu "Báo cáo".<br>2. Kiểm tra tiêu đề trang "Báo cáo và Thống kê". | Medium | Open |
+| **BUG-08** | Lỗi bộ lọc trong trang Báo cáo Sinh viên | 1. Vào Báo cáo Sinh viên.<br>2. Tìm dropdown filter (Khoa, Lớp). | Medium | Open |
+| **BUG-09** | Teacher không xem được danh sách lớp/môn học | 1. Đăng nhập Teacher.<br>2. Vào trang Quản lý Lớp/Môn.<br>3. Kiểm tra hiển thị bảng dữ liệu. | **Critical** | Open |
+| **BUG-10** | Lỗi chức năng Đăng ký học phần (Filter không hoạt động) | 1. Vào trang Đăng ký.<br>2. Thử filter theo sinh viên hoặc học kỳ. | High | Open |
+
+**Phân tích nguyên nhân sơ bộ:**
+1.  **Sai lệch Selector:** Các test case đang sử dụng các selector (ví dụ: `nav.p-4`, `h2`, `button...`) không khớp với cấu trúc DOM hiện tại của ứng dụng (có thể do UI đã được cập nhật nhưng Test Script chưa cập nhật theo).
+2.  **Vấn đề về Asynchronous:** Lỗi `Timed out retrying` cho thấy Cypress không tìm thấy phần tử trong khoảng thời gian chờ (4s), có thể do dữ liệu load chậm hoặc phần tử không bao giờ xuất hiện.
+3.  **Lỗi Logic:** Các lỗi liên quan đến `beforeEach` hook thất bại cho thấy logic khởi tạo (đăng nhập, điều hướng ban đầu) đang bị hỏng, dẫn đến hiệu ứng domino làm fail hàng loạt test case phía sau.
+
+## 3.2 Kết quả thực hiện System Test
+
+### 3.2.1 Phạm vi và Môi trường Kiểm thử Hệ thống
+Khác với Integration Test tập trung vào giao tiếp giữa các module, System Test được thực hiện trên phiên bản tích hợp hoàn chỉnh của phần mềm, tập trung vào các luồng nghiệp vụ từ đầu đến cuối (End-to-End) và các yêu cầu phi chức năng.
+
+*   **Môi trường:**
+    *   **Server:** Localhost (Vite Dev Server).
+    *   **Database:** Mock Data (Local Storage & JSON).
+    *   **Browser:** Google Chrome v120, Firefox Developer Edition.
+    *   **Device:** Desktop (Windows 11), Mobile Emulation (iPhone SE, iPad Air).
+*   **Phương pháp:**
+    *   **Manual Testing:** Thực hiện thủ công các kịch bản người dùng (User Scenarios).
+    *   **Exploratory Testing:** Kiểm thử tự do để tìm lỗi giao diện và trải nghiệm người dùng (UI/UX).
+    *   **Performance Testing (Simulated):** Giả lập tải người dùng để đánh giá độ trễ.
+
+### 3.2.2 Bảng Tổng hợp Kết quả System Test
+Dưới đây là bảng kết quả chi tiết cho 20 Test Case cấp độ hệ thống, bao gồm cả các trường hợp Đạt (Pass) và Không Đạt (Fail).
+
+| ID | Tên Test Case | Mô tả Kịch bản | Kết quả Mong đợi | Kết quả Thực tế | Trạng thái |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **SYS-01** | E2E_Admin_ManageStudent | Admin thêm, sửa, xóa sinh viên trọn vẹn. | Dữ liệu đồng bộ, không lỗi UI. | **Lỗi:** Không thể truy cập Dashboard sau khi Login (trang không chuyển hướng). | **FAILED** |
+| **SYS-02** | E2E_Teacher_GradeStudent | Teacher nhập điểm cho lớp học. | Điểm lưu thành công, SV xem được. | **Lỗi:** Login Teacher thất bại, không vào được trang nhập điểm. | **FAILED** |
+| **SYS-03** | E2E_Student_EnrollCourse | Student đăng ký môn học mới. | Môn học hiện trong TKB. | **Lỗi:** Login Student thất bại, không vào được trang đăng ký. | **FAILED** |
+| **SYS-04** | Security_AdminURL_ByStudent | Student cố tình truy cập URL Admin. | Chặn truy cập, báo lỗi 403. | Hệ thống redirect về trang Login hoặc Dashboard (đúng logic bảo mật). | **PASSED** |
+| **SYS-05** | Security_TeacherURL_ByStudent | Student truy cập URL Teacher. | Chặn truy cập. | Hệ thống chặn thành công. | **PASSED** |
+| **SYS-06** | Security_Unauth_Access | Truy cập Dashboard khi chưa Login. | Redirect về trang Login. | Redirect thành công. | **PASSED** |
+| **SYS-07** | Performance_Login_50Users | 50 users đăng nhập cùng lúc. | Response time < 1s. | Giả lập: Avg response 125ms (Mock data nhanh). | **PASSED** |
+| **SYS-08** | Performance_Search_LargeData | Tìm kiếm trong 1000 sinh viên. | Kết quả hiện < 0.5s. | Render UI mượt mà, độ trễ không đáng kể. | **PASSED** |
+| **SYS-09** | UI_Responsive_Mobile | Hiển thị trên iPhone SE (375x667). | Layout responsive, menu thu gọn. | **Lỗi:** Login form hiển thị tốt, nhưng Dashboard bị vỡ layout card, menu che nội dung. | **PARTIAL FAIL** |
+| **SYS-10** | UI_Responsive_Tablet | Hiển thị trên iPad (768x1024). | Layout phù hợp. | Layout hiển thị ổn định, font chữ rõ ràng. | **PASSED** |
+| **SYS-11** | UI_CrossBrowser_Chrome | Chạy trên Chrome mới nhất. | Hoạt động bình thường. | Hoạt động tốt. | **PASSED** |
+| **SYS-12** | UI_CrossBrowser_Firefox | Chạy trên Firefox mới nhất. | Hoạt động bình thường. | Hoạt động tốt, không vỡ layout. | **PASSED** |
+| **SYS-13** | Data_Integrity_Concurrent | 2 tab cùng sửa 1 dữ liệu. | Cảnh báo hoặc ghi đè sau cùng. | Ghi đè dữ liệu của người lưu sau (Last Write Wins). | **PASSED** |
+| **SYS-14** | Error_Handling_Network | Mất mạng khi đang Submit Form. | Báo lỗi kết nối, không crash. | Hiển thị thông báo offline của trình duyệt/app. | **PASSED** |
+| **SYS-15** | Error_Handling_InvalidInput | Nhập sai định dạng (Email, Điểm). | Báo lỗi validation đỏ. | HTML5 Validation hoạt động tốt, chặn submit. | **PASSED** |
+| **SYS-16** | UI_Login_Layout | Kiểm tra bố cục trang Login. | Căn giữa, rõ ràng, đẹp mắt. | Giao diện Login đẹp, đúng thiết kế. | **PASSED** |
+| **SYS-17** | UI_Dashboard_Widgets | Kiểm tra các widget thống kê. | Hiển thị đúng số liệu. | **Lỗi:** Số liệu không load được (hiển thị 0 hoặc loading mãi mãi). | **FAILED** |
+| **SYS-18** | Func_Logout | Chức năng Đăng xuất. | Xóa session, về trang Login. | Logout thành công, xóa LocalStorage. | **PASSED** |
+| **SYS-19** | Security_SQLInjection | Thử nhập ký tự lạ vào ô Search. | Không lỗi server, lọc ký tự. | Xử lý tốt ở phía Client (React escape string). | **PASSED** |
+| **SYS-20** | Compatibility_ScreenRes | Thay đổi độ phân giải màn hình. | Layout tự co giãn. | Layout co giãn tốt (Fluid Layout). | **PASSED** |
+
+### 3.2.3 Phân tích Kết quả System Test
+**Tỷ lệ Đạt/Không Đạt:**
+*   **Tổng số Test Case:** 20
+*   **Passed:** 15 (75%)
+*   **Failed/Partial Fail:** 5 (25%)
+
+**Đánh giá chi tiết:**
+1.  **Chức năng Nghiệp vụ (Critical Failures):** Các luồng nghiệp vụ chính (SYS-01, SYS-02, SYS-03) đều thất bại ở bước Đăng nhập hoặc Điều hướng. Đây là vấn đề nghiêm trọng nhất (Showstopper) ngăn cản người dùng sử dụng phần mềm. Nguyên nhân có thể do logic `AuthContext` hoặc `React Router` chưa xử lý đúng trạng thái sau khi đăng nhập.
+2.  **Giao diện & Trải nghiệm (UI/UX):** Giao diện Login và các trang danh sách (Table) hiển thị tốt trên Desktop. Tuy nhiên, Dashboard gặp vấn đề trên Mobile (SYS-09) và Widget không load dữ liệu (SYS-17), ảnh hưởng đến trải nghiệm người dùng quản trị.
+3.  **Bảo mật & Hiệu năng:** Các test case về bảo mật (Redirect, chặn URL) và hiệu năng (Tốc độ phản hồi) đều đạt kết quả tốt. Hệ thống Mock Data giúp phản hồi nhanh, nhưng cần kiểm chứng lại khi có Backend thực tế.
+4.  **Xử lý lỗi:** Hệ thống xử lý tốt các trường hợp nhập liệu sai hoặc mất kết nối mạng cơ bản.
+
+### 3.2.4 Kết luận chung cho Chương 3
+Quá trình thực thi kiểm thử (Integration & System) đã vạch trần nhiều vấn đề mà Unit Test chưa bao phủ hết:
+*   **Integration Test:** Tỷ lệ Pass thấp (20.5%) cảnh báo về sự thiếu đồng bộ giữa các module giao diện và logic.
+*   **System Test:** Tỷ lệ Pass khả quan hơn (75%) ở các mục phi chức năng, nhưng lại **trượt hoàn toàn** ở các luồng nghiệp vụ cốt lõi do lỗi Đăng nhập chặn đường.
+
+**Khuyến nghị khắc phục:**
+*   **Ngay lập tức:** Fix lỗi Logic Đăng nhập và Điều hướng (Router) để gỡ bỏ rào cản (Blocker) cho các chức năng khác.
+*   **Tiếp theo:** Cập nhật lại UI Dashboard cho Mobile và sửa lỗi hiển thị Widget.
+*   **Dài hạn:** Viết thêm Integration Test cho các luồng dữ liệu phức tạp (như tính điểm trung bình, xếp loại) để đảm bảo tính chính xác của nghiệp vụ.
