@@ -1385,3 +1385,34 @@ Việc áp dụng tự động hóa đã thay đổi hoàn toàn quy trình ki�
 
 **Kết luận:**
 Sự kết hợp giữa Jest, Cypress và JMeter đã tạo nên một "lưới lọc lỗi" đa tầng hiệu quả. Mặc dù vẫn còn một số test case Integration bị fail do lỗi sản phẩm, nhưng hệ thống Automation đã hoàn thành xuất sắc nhiệm vụ cảnh báo sớm và đảm bảo tính ổn định cho các chức năng cốt lõi.
+
+# KẾT LUẬN
+
+## 1. Những nội dung đã đạt được
+Qua quá trình nghiên cứu và thực hiện đề tài "Xây dựng quy trình kiểm thử tự động cho hệ thống Quản lý Sinh viên", nhóm thực hiện đã đạt được những kết quả quan trọng sau:
+
+*   **Xây dựng thành công chiến lược kiểm thử toàn diện:** Đã thiết lập được quy trình kiểm thử đa tầng, bao gồm Unit Test (kiểm thử đơn vị), Integration Test (kiểm thử tích hợp), System Test (kiểm thử hệ thống) và Performance Test (kiểm thử hiệu năng).
+*   **Làm chủ bộ công cụ kiểm thử hiện đại:** Đã áp dụng thành thạo bộ ba công cụ **Jest**, **Cypress**, và **Apache JMeter** vào dự án thực tế.
+    *   *Jest:* Đạt độ bao phủ code (Code Coverage) trên 85% cho các module tiện ích và logic xác thực.
+    *   *Cypress:* Tự động hóa được 80% các luồng nghiệp vụ chính (Đăng nhập, Quản lý sinh viên, Nhập điểm).
+    *   *JMeter:* Thực hiện thành công các kịch bản Stress Test và Load Test, xác định được ngưỡng chịu tải của hệ thống.
+*   **Phát hiện và cảnh báo lỗi sớm:** Nhờ quy trình kiểm thử tự động, nhóm đã phát hiện ra nhiều lỗi tiềm ẩn (Bug) liên quan đến giao diện, logic phân quyền và hiệu năng trước khi sản phẩm được bàn giao.
+*   **Tài liệu hóa quy trình:** Đã xây dựng được bộ tài liệu kiểm thử đầy đủ, bao gồm Kế hoạch kiểm thử (Test Plan), Kịch bản kiểm thử (Test Cases), và Báo cáo kết quả (Test Report), làm cơ sở cho việc bảo trì và phát triển sau này.
+
+## 2. Hạn chế
+Bên cạnh những kết quả đạt được, đề tài vẫn còn một số hạn chế cần khắc phục:
+
+*   **Môi trường kiểm thử còn hạn hẹp:** Hiện tại, toàn bộ quá trình kiểm thử mới chỉ được thực hiện trên môi trường Local (máy cá nhân), chưa được triển khai trên môi trường Staging hay Production thực tế giống như doanh nghiệp.
+*   **Dữ liệu giả lập (Mock Data):** Hệ thống vẫn đang sử dụng Mock Data lưu trữ trên LocalStorage thay vì kết nối với một Backend API và Cơ sở dữ liệu thực sự (như SQL/NoSQL). Điều này làm giảm tính thực tế của các bài test liên quan đến độ trễ mạng và xử lý đồng thời.
+*   **Độ ổn định của Test Script:** Một số kịch bản E2E Test (Cypress) vẫn còn hiện tượng "Flaky" (lúc pass lúc fail) do vấn đề xử lý bất đồng bộ trên giao diện chưa triệt để.
+*   **Phạm vi kiểm thử di động (Mobile Testing):** Chưa thực hiện kiểm thử tự động chuyên sâu trên các thiết bị di động thực tế, mới chỉ dừng lại ở việc giả lập Viewport trên trình duyệt.
+
+## 3. Hướng phát triển
+Để hoàn thiện đề tài và nâng cao chất lượng sản phẩm, nhóm đề xuất các hướng phát triển tiếp theo:
+
+*   **Triển khai CI/CD Pipeline:** Tích hợp quy trình chạy test tự động vào GitHub Actions hoặc Jenkins. Mỗi khi có code mới được push lên, hệ thống sẽ tự động chạy Unit Test và Integration Test, nếu Pass mới cho phép Merge.
+*   **Kết nối Backend thực tế:** Xây dựng Backend API (Node.js/Express hoặc Python/Django) và Database (MongoDB/PostgreSQL) để thay thế Mock Data, giúp các bài test phản ánh đúng thực tế hơn.
+*   **Mở rộng phạm vi kiểm thử:**
+    *   Thêm **Security Testing** (Kiểm thử bảo mật) để phát hiện các lỗ hổng như SQL Injection, XSS.
+    *   Thêm **Visual Regression Testing** (Kiểm thử hồi quy giao diện) để tự động so sánh ảnh chụp màn hình và phát hiện sai lệch về pixel.
+*   **Tối ưu hóa Test Script:** Refactor lại code test theo mô hình Page Object Model (POM) để tăng khả năng tái sử dụng và dễ bảo trì hơn.
