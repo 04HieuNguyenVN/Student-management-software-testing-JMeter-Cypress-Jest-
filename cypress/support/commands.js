@@ -9,8 +9,8 @@
 Cypress.Commands.add("login", (role = "admin") => {
   const credentials = {
     admin: { username: "admin", password: "admin123" },
-    teacher: { username: "teacher", password: "teacher123" },
-    student: { username: "student", password: "student123" },
+    teacher: { username: "gv001", password: "gv123" },
+    student: { username: "sv001", password: "sv123" },
   };
 
   const { username, password } = credentials[role];

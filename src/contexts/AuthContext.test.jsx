@@ -23,21 +23,21 @@ Object.defineProperty(window, "localStorage", {
   value: localStorageMock,
 });
 
-describe("AuthContext", () => {
+describe("Kiểm thử AuthContext - Quản lý Xác thực", () => {
   beforeEach(() => {
     window.localStorage.clear();
   });
 
   const wrapper = ({ children }) => <AuthProvider>{children}</AuthProvider>;
 
-  test("should provide initial state (not authenticated)", () => {
+  test(" cung cấp trạng thái ban đầu (chưa đăng nhập)", () => {
     const { result } = renderHook(() => useAuth(), { wrapper });
     expect(result.current.user).toBeNull();
     expect(result.current.isAuthenticated).toBe(false);
     expect(result.current.loading).toBe(false);
   });
 
-  test("should login successfully as admin", () => {
+  test(" đăng nhập thành công với tài khoản Admin", () => {
     const { result } = renderHook(() => useAuth(), { wrapper });
 
     act(() => {
@@ -51,7 +51,7 @@ describe("AuthContext", () => {
     expect(window.localStorage.getItem("user")).toContain("admin");
   });
 
-  test("should login successfully as student", () => {
+  test(" đăng nhập thành công với tài khoản Sinh viên", () => {
     const { result } = renderHook(() => useAuth(), { wrapper });
 
     act(() => {
@@ -63,7 +63,7 @@ describe("AuthContext", () => {
     expect(result.current.isStudent).toBe(true);
   });
 
-  test("should fail login with wrong password", () => {
+  test(" từ chối đăng nhập khi sai mật khẩu", () => {
     const { result } = renderHook(() => useAuth(), { wrapper });
 
     act(() => {
@@ -76,7 +76,7 @@ describe("AuthContext", () => {
     expect(result.current.isAuthenticated).toBe(false);
   });
 
-  test("should logout successfully", () => {
+  test(" đăng xuất thành công", () => {
     const { result } = renderHook(() => useAuth(), { wrapper });
 
     // Login first
@@ -95,7 +95,7 @@ describe("AuthContext", () => {
     expect(window.localStorage.getItem("user")).toBeNull();
   });
 
-  test("should restore session from localStorage", () => {
+  test(" khôi phục phiên đăng nhập từ localStorage", () => {
     const user = { username: "admin", role: "admin" };
     window.localStorage.setItem("user", JSON.stringify(user));
 

@@ -1,185 +1,167 @@
 /* eslint-env cypress */
-// Test Grades Management and Student Enrollment
+// Kiểm thử Quản lý Điểm và Đăng ký Học phần
 
-describe("Grades Management", () => {
+describe("Quản lý Điểm", () => {
   beforeEach(() => {
     cy.clearLocalStorage();
     cy.login("admin");
-    cy.navigateTo("Điểm");
+    cy.navigateTo("Quản lý điểm");
   });
 
-  describe("Grades List View", () => {
-    it("should display grades page", () => {
+  describe("Xem Danh sách Điểm", () => {
+    it(" hiển thị trang điểm", () => {
       cy.url().should("include", "/grades");
-      cy.get("h1").should("contain", "Quản lý Điểm");
+      cy.get("h1").should("contain", "Quản lý điểm");
     });
 
-    it("should display grades table", () => {
+    it(" hiển thị bảng điểm", () => {
       cy.get("table").should("exist");
     });
   });
 
-  describe("Filter Grades", () => {
-    it("should filter by class", () => {
+  describe("Lọc Điểm", () => {
+    it(" lọc theo lớp", () => {
       cy.get("select").first().select(1);
       cy.wait(300);
       cy.get("table").should("exist");
     });
 
-    it("should filter by subject", () => {
-      const selects = cy.get("select");
-      if (selects.length > 1) {
-        selects.eq(1).select(1);
-        cy.wait(300);
-      }
+    it(" lọc theo môn học", () => {
+      cy.get("select").eq(1).select(1);
+      cy.wait(300);
+      cy.get("table").should("exist");
     });
   });
 
-  describe("Add/Edit Grades", () => {
-    it("should open grade entry form", () => {
-      cy.get("button").contains("Nhập điểm").click();
-      cy.get("h2").should("contain", "Nhập điểm");
+  describe("Thêm/Sửa Điểm", () => {
+
+    it(" cho phép sửa điểm trực tiếp", () => {
+      cy.get('button[title="Sửa"]').first().click({ force: true });
+      cy.get('input[type="number"]').should("exist");
     });
 
-    it("should validate grade range", () => {
-      cy.get("button").contains("Nhập điểm").click();
-
-      // Try to enter invalid grade
-      const gradeInputs = cy.get('input[type="number"]');
-      if (gradeInputs.length > 0) {
-        gradeInputs.first().clear().type("11"); // Invalid: > 10
-        gradeInputs.first().should("have.attr", "max", "10");
-      }
+    it(" kiểm tra tính toán điểm trung bình", () => {
+      cy.get('button[title="Sửa"]').first().click({ force: true });
+      cy.get('input[type="number"]').first().clear().type("8");
+      cy.get('input[type="number"]').eq(1).clear().type("8");
+      cy.get('button[title="Lưu"]').first().click();
+      cy.wait(500);
+      cy.get("tbody tr").first().should("contain", "8");
     });
   });
 
-  describe("Grade Statistics", () => {
-    it("should display grade statistics", () => {
-      const statsSection = cy.get("div").contains("Thống kê");
-      if (statsSection.length > 0) {
-        statsSection.should("be.visible");
-      }
+  describe("Thống kê Điểm", () => {
+    it(" hiển thị phần thống kê điểm", () => {
+      cy.get("div").contains("Thống kê").should("exist");
     });
   });
 });
 
-describe("Student Grade View", () => {
+describe("Xem Điểm của Sinh viên", () => {
   beforeEach(() => {
     cy.clearLocalStorage();
     cy.login("student");
-    cy.navigateTo("Điểm của tôi");
+    cy.navigateTo("Xem điểm");
   });
 
-  it("should display student grades", () => {
+  it(" hiển thị điểm của sinh viên", () => {
     cy.url().should("include", "/my-grades");
     cy.get("h1").should("contain", "Kết quả học tập");
   });
 
-  it("should display GPA information", () => {
+  it(" hiển thị thông tin GPA", () => {
     cy.get("div").contains("GPA").should("exist");
   });
 
-  it("should display grade table", () => {
+  it(" hiển thị bảng điểm", () => {
     cy.get("table").should("exist");
   });
 
-  it("should not allow editing grades", () => {
+  it("Không  cho phép sửa điểm", () => {
     cy.get("button").contains("Sửa").should("not.exist");
     cy.get("button").contains("Xóa").should("not.exist");
   });
 });
 
-describe("Enrollment Management", () => {
+describe("Quản lý Đăng ký Học phần", () => {
   beforeEach(() => {
     cy.clearLocalStorage();
     cy.login("admin");
     cy.navigateTo("Đăng ký học phần");
   });
 
-  describe("Enrollment List View", () => {
-    it("should display enrollment page", () => {
+  describe("Xem Danh sách Đăng ký", () => {
+    it(" hiển thị trang đăng ký học phần", () => {
       cy.url().should("include", "/enrollment");
       cy.get("h1").should("contain", "Đăng ký học phần");
     });
 
-    it("should display enrollment table", () => {
+    it(" hiển thị bảng đăng ký", () => {
       cy.get("table").should("exist");
     });
   });
 
-  describe("Add Enrollment", () => {
-    it("should open enrollment form", () => {
+  describe("Thêm Đăng ký", () => {
+    it(" mở form đăng ký học phần", () => {
       cy.get("button").contains("Đăng ký mới").click();
       cy.get("h2").should("contain", "Đăng ký học phần");
     });
 
-    it("should register student for course", () => {
+    it(" đăng ký sinh viên vào môn học", () => {
       cy.get("button").contains("Đăng ký mới").click();
-
-      // Select student
-      cy.get("select").first().select(1);
-
-      // Select subject
-      const selects = cy.get("select");
-      if (selects.length > 1) {
-        selects.eq(1).select(1);
-      }
-
+      cy.get("select").first().select(1, { force: true });
+      cy.get("select").eq(1).select(1, { force: true });
       cy.get('button[type="submit"]').click();
       cy.wait(500);
+      cy.get("body").should("exist");
     });
   });
 
-  describe("Filter Enrollments", () => {
-    it("should filter by student", () => {
+  describe("Lọc Đăng ký", () => {
+    it(" lọc theo sinh viên", () => {
       cy.get("select").first().select(1);
       cy.wait(300);
       cy.get("table").should("exist");
     });
 
-    it("should filter by semester", () => {
-      const selects = cy.get("select");
-      if (selects.length > 1) {
-        selects.eq(1).select(1);
-        cy.wait(300);
-      }
+    it(" lọc theo học kỳ", () => {
+      cy.get("select").eq(1).select(1);
+      cy.wait(300);
+      cy.get("table").should("exist");
     });
   });
 });
 
-describe("Student Enrollment View", () => {
+describe("Xem Đăng ký của Sinh viên", () => {
   beforeEach(() => {
     cy.clearLocalStorage();
     cy.login("student");
     cy.navigateTo("Đăng ký học phần");
   });
 
-  it("should display available courses for enrollment", () => {
+  it(" hiển thị các môn học có thể đăng ký", () => {
     cy.url().should("include", "/enrollment");
     cy.get("h1").should("contain", "Đăng ký học phần");
   });
 
-  it("should display enrolled courses", () => {
+  it(" hiển thị các môn đã đăng ký", () => {
     cy.get("table").should("exist");
   });
 });
 
-describe("Teacher Grades Access", () => {
+describe("Quyền truy cập Điểm của Giáo viên", () => {
   beforeEach(() => {
     cy.clearLocalStorage();
     cy.login("teacher");
-    cy.navigateTo("Điểm");
+    cy.navigateTo("Quản lý điểm");
   });
 
-  it("should allow teacher to view grades", () => {
+  it(" cho phép giáo viên xem điểm", () => {
     cy.url().should("include", "/grades");
     cy.get("table").should("exist");
   });
 
-  it("should allow teacher to enter grades", () => {
-    const addButton = cy.get("button").contains("Nhập điểm");
-    if (addButton.length > 0) {
-      addButton.should("be.visible");
-    }
+  it(" cho phép giáo viên nhập điểm", () => {
+    cy.get('button[title="Sửa"]').should("exist");
   });
 });

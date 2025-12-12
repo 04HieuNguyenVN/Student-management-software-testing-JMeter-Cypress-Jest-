@@ -1,0 +1,93 @@
+
+
+DevTools listening on ws://127.0.0.1:53332/devtools/browser/1c75d52a-c43b-4bcf-a3e9-c5550ecd42ba
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.4                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             │
+  │ Specs:          1 found (courses-classes.cy.js)                                                │
+  │ Searched:       G:\Personal Project\KiemThu\student-management-system\cypress\e2e\courses-clas │
+  │                 ses.cy.js                                                                      │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  courses-classes.cy.js                                                           (1 of 1)
+
+
+  Quản lý Môn học
+    Xem Danh sách Môn học
+      √  hiển thị trang môn học (1548ms)
+      √  hiển thị bảng môn học (1261ms)
+    Thêm Môn học
+      √  mở form thêm môn học (1244ms)
+      √  thêm môn học mới thành công (3065ms)
+    Tìm kiếm Môn học
+      1)  tìm kiếm môn học theo tên
+
+  Quản lý Lớp học
+    Xem Danh sách Lớp học
+      √  hiển thị trang lớp học (1182ms)
+      √  hiển thị bảng lớp học (1188ms)
+    Thêm Lớp học
+      √  mở form thêm lớp học (1264ms)
+      √  thêm lớp học mới thành công (3160ms)
+    Chi tiết Lớp học
+      √  có thể xem danh sách sinh viên của lớp (1579ms)
+
+  Quyền truy cập Môn học của Giáo viên
+    √  cho phép giáo viên xem môn học (1127ms)
+    √  cho phép giáo viên xem lớp học (1066ms)
+
+
+  11 passing (24s)
+  1 failing
+
+  1) Quản lý Môn học
+       Tìm kiếm Môn học
+          tìm kiếm môn học theo tên:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[type="text"]`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/courses-classes.cy.js:46:9)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        12                                                                               │
+  │ Passing:      11                                                                               │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  1                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     23 seconds                                                                       │
+  │ Spec Ran:     courses-classes.cy.js                                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\course     (1280x720)
+     s-classes.cy.js\Quản lý Môn học -- Tìm kiếm Môn học --  tìm kiếm môn học theo tê               
+     n (failed).png                                                                                 
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ×  courses-classes.cy.js                    00:23       12       11        1        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ×  1 of 1 failed (100%)                     00:23       12       11        1        -        -  
+

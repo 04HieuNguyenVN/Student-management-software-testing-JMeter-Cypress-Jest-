@@ -11,6 +11,9 @@ const Enrollment = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedStudent, setSelectedStudent] = useState("");
   const [selectedSubject, setSelectedSubject] = useState("");
+  // Filter states
+  const [filterStudent, setFilterStudent] = useState("");
+  const [filterSemester, setFilterSemester] = useState("");
 
   useEffect(() => {
     setEnrollments(MOCK_ENROLLMENTS);
@@ -88,6 +91,17 @@ const Enrollment = () => {
     );
   };
 
+  // Filter Logic
+  const filteredEnrollments = enrollments.filter((e) => {
+    const matchStudent = filterStudent
+      ? e.studentId === parseInt(filterStudent)
+      : true;
+    const matchSemester = filterSemester
+      ? e.semester === filterSemester
+      : true;
+    return matchStudent && matchSemester;
+  });
+
   return (
     <div>
       <div className="flex justify-between items-center mb-6">
@@ -121,6 +135,60 @@ const Enrollment = () => {
         </div>
       </div>
 
+
+
+      {/* Filter Section */}
+      <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Sinh viên
+            </label>
+            <select
+              value={filterStudent}
+              onChange={(e) => setFilterStudent(e.target.value)}
+              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">Tất cả sinh viên</option>
+              {MOCK_STUDENTS.map((student) => (
+                <option key={student.id} value={student.id}>
+                  {student.fullName} ({student.studentCode})
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Học kỳ
+            </label>
+            <select
+              value={filterSemester}
+              onChange={(e) => setFilterSemester(e.target.value)}
+              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">Tất cả học kỳ</option>
+              {/* Mock semesters */}
+              <option value="1">Học kỳ 1</option>
+              <option value="2">Học kỳ 2</option>
+              <option value="HK1 2024-2025">HK1 2024-2025</option>
+            </select>
+          </div>
+
+          <div className="flex items-end">
+             <button
+              onClick={() => {
+                  setFilterStudent("");
+                  setFilterSemester("");
+              }}
+              className="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+
       {/* Table */}
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
         <table className="min-w-full divide-y divide-gray-200">
@@ -150,7 +218,7 @@ const Enrollment = () => {
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {enrollments.map((enrollment) => (
+            {filteredEnrollments.map((enrollment) => (
               <tr key={enrollment.id} className="hover:bg-gray-50">
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                   {getStudentInfo(enrollment.studentId)}

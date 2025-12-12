@@ -1,0 +1,603 @@
+﻿
+> student-management-system@0.0.0 test:e2e:headless
+> cypress run
+
+
+node.exe : 
+At line:1 char:1
++ & "C:\nvm4w\nodejs/n
+ode.exe" "C:\nvm4w\nod
+ejs/node_modules/npm/b
+in/np ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : 
+NotSpecified    : 
+(:String) [], Rem    
+oteException
+    + 
+FullyQualifiedErr    
+orId : NativeComman   
+ dError
+ 
+DevTools listening on 
+ws://127.0.0.1:52069/d
+evtools/browser/d6c6e7
+1d-ab0b-444b-9bb8-6d1f
+e867db30
+
+====================================================================================================
+
+  (Run Starting)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Cypress:        14.5.4                                                                         Γöé
+  Γöé Browser:        Electron 130 (headless)                                                        Γöé
+  Γöé Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             Γöé
+  Γöé Specs:          5 found (auth.cy.js, courses-classes.cy.js, dashboard-reports.cy.js, grades-en Γöé
+  Γöé                 rollment.cy.js, students.cy.js)                                                Γöé
+  Γöé Searched:       cypress/e2e/**/*.cy.{js,jsx,ts,tsx}                                            Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  auth.cy.js                                                                      (1 of 5)
+
+
+  Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication)
+    Trang ─É─âng nhß║¡p
+      1)  hiß╗ân thß╗ï form ─æ─âng nhß║¡p
+      2)  b├ío lß╗ùi khi ─æß╗â trß╗æng th├┤ng tin ─æ─âng nhß║¡p
+      ΓêÜ  b├ío lß╗ùi khi nhß║¡p th├┤ng tin ─æ─âng nhß║¡p sai (829ms)
+    ─É─âng nhß║¡p Admin
+      3)  ─æ─âng nhß║¡p th├ánh c├┤ng vß╗¢i t├ái khoß║ún Admin
+      ΓêÜ  ─æ─âng xuß║Ñt th├ánh c├┤ng (980ms)
+    ─É─âng nhß║¡p Gi├ío vi├¬n
+      4)  ─æ─âng nhß║¡p th├ánh c├┤ng vß╗¢i t├ái khoß║ún Gi├ío vi├¬n
+    ─É─âng nhß║¡p Sinh vi├¬n
+      5)  ─æ─âng nhß║¡p th├ánh c├┤ng vß╗¢i t├ái khoß║ún Sinh vi├¬n
+    Duy tr├¼ Phi├¬n ─æ─âng nhß║¡p
+      6)  giß╗» phi├¬n ─æ─âng nhß║¡p sau khi tß║úi lß║íi trang
+    Bß║úo vß╗ç Route
+      ΓêÜ  chuyß╗ân h╞░ß╗¢ng vß╗ü login khi truy cß║¡p route bß║úo vß╗ç m├á ch╞░a ─æ─âng nhß║¡p (254ms)
+      7)  chß║╖n sinh vi├¬n truy cß║¡p route d├ánh cho admin
+      8)  chß║╖n gi├ío vi├¬n truy cß║¡p route chß╗ë d├ánh cho admin
+
+
+  3 passing (42s)
+  8 failing
+
+  1) Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication)
+       Trang ─É─âng nhß║¡p
+          hiß╗ân thß╗ï form ─æ─âng nhß║¡p:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `h2`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:13:19)
+
+  2) Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication)
+       Trang ─É─âng nhß║¡p
+          b├ío lß╗ùi khi ─æß╗â trß╗æng th├┤ng tin ─æ─âng nhß║¡p:
+     AssertionError: Timed out retrying after 4000ms: expected '<input.pl-10.w-full.px-4.py-2.border.border-gray-300.rounded-lg.focus:ring-2.focus:ring-blue-500.focus:border-transparent>' to have attribute 'required'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:21:35)
+
+  3) Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication)
+       ─É─âng nhß║¡p Admin
+          ─æ─âng nhß║¡p th├ánh c├┤ng vß╗¢i t├ái khoß║ún Admin:
+     AssertionError: Timed out retrying after 4000ms: expected '<nav.p-4>' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:43:20)
+
+  4) Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication)
+       ─É─âng nhß║¡p Gi├ío vi├¬n
+          ─æ─âng nhß║¡p th├ánh c├┤ng vß╗¢i t├ái khoß║ún Gi├ío vi├¬n:
+     AssertionError: Timed out retrying after 4000ms: expected '<nav.p-4>' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:67:20)
+
+  5) Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication)
+       ─É─âng nhß║¡p Sinh vi├¬n
+          ─æ─âng nhß║¡p th├ánh c├┤ng vß╗¢i t├ái khoß║ún Sinh vi├¬n:
+     AssertionError: Timed out retrying after 4000ms: expected '<nav.p-4>' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:86:20)
+
+  6) Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication)
+       Duy tr├¼ Phi├¬n ─æ─âng nhß║¡p
+          giß╗» phi├¬n ─æ─âng nhß║¡p sau khi tß║úi lß║íi trang:
+     AssertionError: Timed out retrying after 4000ms: expected '<nav.p-4>' to contain 'Sinh vi├¬n'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:110:20)
+
+  7) Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication)
+       Bß║úo vß╗ç Route
+          chß║╖n sinh vi├¬n truy cß║¡p route d├ánh cho admin:
+     AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:5173/students' to not include '/students'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:127:15)
+
+  8) Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication)
+       Bß║úo vß╗ç Route
+          chß║╖n gi├ío vi├¬n truy cß║¡p route chß╗ë d├ánh cho admin:
+     AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:5173/settings' to not include '/settings'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:137:15)
+
+
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        11                                                                               Γöé
+  Γöé Passing:      3                                                                                Γöé
+  Γöé Failing:      8                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      0                                                                                Γöé
+  Γöé Screenshots:  8                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     42 seconds                                                                       Γöé
+  Γöé Spec Ran:     auth.cy.js                                                                       Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication) -- Trang ─É─âng nhß║¡p --  hiß╗ân thß╗ï form ─æ─ân               
+     g nhß║¡p (failed).png                                                                            
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication) -- Trang ─É─âng nhß║¡p --  b├ío lß╗ùi khi ─æß╗â tr               
+     ß╗æng th├┤ng tin ─æ─âng nhß║¡p (failed).png                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication) -- ─É─âng nhß║¡p Admin --  ─æ─âng nhß║¡p th├ánh c               
+     ├┤ng vß╗¢i t├ái khoß║ún Admin (failed).png                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication) -- ─É─âng nhß║¡p Gi├ío vi├¬n --  ─æ─âng nhß║¡p th├á               
+     nh c├┤ng vß╗¢i t├ái khoß║ún Gi├ío vi├¬n (failed).png                                                   
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication) -- ─É─âng nhß║¡p Sinh vi├¬n --  ─æ─âng nhß║¡p th├á               
+     nh c├┤ng vß╗¢i t├ái khoß║ún Sinh vi├¬n (failed).png                                                   
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication) -- Duy tr├¼ Phi├¬n ─æ─âng nhß║¡p --  giß╗» phi├¬n               
+      ─æ─âng nhß║¡p sau khi tß║úi lß║íi trang (failed).png                                                  
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication) -- Bß║úo vß╗ç Route --  chß║╖n sinh vi├¬n truy                
+     cß║¡p route d├ánh cho admin (failed).png                                                          
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication) -- Bß║úo vß╗ç Route --  chß║╖n gi├ío vi├¬n truy                
+     cß║¡p route chß╗ë d├ánh cho admin (failed).png                                                      
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  courses-classes.cy.js                                                           (2 of 5)
+
+
+  Quß║ún l├╜ M├┤n hß╗ìc
+    Xem Danh s├ích M├┤n hß╗ìc
+      1) "before each" hook for " hiß╗ân thß╗ï trang m├┤n hß╗ìc"
+
+  Quß║ún l├╜ Lß╗¢p hß╗ìc
+    Xem Danh s├ích Lß╗¢p hß╗ìc
+      2) "before each" hook for " hiß╗ân thß╗ï trang lß╗¢p hß╗ìc"
+
+  Quyß╗ün truy cß║¡p M├┤n hß╗ìc cß╗ºa Gi├ío vi├¬n
+    3)  cho ph├⌐p gi├ío vi├¬n xem m├┤n hß╗ìc
+    4)  cho ph├⌐p gi├ío vi├¬n xem lß╗¢p hß╗ìc
+
+
+  0 passing (21s)
+  4 failing
+
+  1) Quß║ún l├╜ M├┤n hß╗ìc
+       Xem Danh s├ích M├┤n hß╗ìc
+         "before each" hook for " hiß╗ân thß╗ï trang m├┤n hß╗ìc":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'M├┤n hß╗ìc' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Quß║ún l├╜ M├┤n hß╗ìc`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  2) Quß║ún l├╜ Lß╗¢p hß╗ìc
+       Xem Danh s├ích Lß╗¢p hß╗ìc
+         "before each" hook for " hiß╗ân thß╗ï trang lß╗¢p hß╗ìc":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Lß╗¢p hß╗ìc' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Quß║ún l├╜ Lß╗¢p hß╗ìc`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  3) Quyß╗ün truy cß║¡p M├┤n hß╗ìc cß╗ºa Gi├ío vi├¬n
+        cho ph├⌐p gi├ío vi├¬n xem m├┤n hß╗ìc:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `table`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/courses-classes.cy.js:110:20)
+
+  4) Quyß╗ün truy cß║¡p M├┤n hß╗ìc cß╗ºa Gi├ío vi├¬n
+        cho ph├⌐p gi├ío vi├¬n xem lß╗¢p hß╗ìc:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `table`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/courses-classes.cy.js:116:20)
+
+
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        12                                                                               Γöé
+  Γöé Passing:      0                                                                                Γöé
+  Γöé Failing:      4                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      8                                                                                Γöé
+  Γöé Screenshots:  4                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     20 seconds                                                                       Γöé
+  Γöé Spec Ran:     courses-classes.cy.js                                                            Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\course     (1280x720)
+     s-classes.cy.js\Quß║ún l├╜ M├┤n hß╗ìc --  hiß╗ân thß╗ï trang m├┤n hß╗ìc -- before each hook (               
+     failed).png                                                                                    
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\course     (1280x720)
+     s-classes.cy.js\Quß║ún l├╜ Lß╗¢p hß╗ìc --  hiß╗ân thß╗ï trang lß╗¢p hß╗ìc -- before each hook (               
+     failed).png                                                                                    
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\course     (1280x720)
+     s-classes.cy.js\Quyß╗ün truy cß║¡p M├┤n hß╗ìc cß╗ºa Gi├ío vi├¬n --  cho ph├⌐p gi├ío vi├¬n xem                
+     m├┤n hß╗ìc (failed).png                                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\course     (1280x720)
+     s-classes.cy.js\Quyß╗ün truy cß║¡p M├┤n hß╗ìc cß╗ºa Gi├ío vi├¬n --  cho ph├⌐p gi├ío vi├¬n xem                
+     lß╗¢p hß╗ìc (failed).png                                                                           
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  dashboard-reports.cy.js                                                         (3 of 5)
+
+
+  Dashboard
+    Dashboard Admin
+      1)  hiß╗ân thß╗ï dashboard admin vß╗¢i thß╗æng k├¬
+      2)  hiß╗ân thß╗ï c├íc thß║╗ tß╗òng hß╗úp
+      ΓêÜ  hiß╗ân thß╗ï nß╗Öi dung dashboard (758ms)
+    Dashboard Gi├ío vi├¬n
+      3)  hiß╗ân thß╗ï dashboard gi├ío vi├¬n
+      ΓêÜ  hiß╗ân thß╗ï th├┤ng tin d├ánh cho gi├ío vi├¬n (859ms)
+    Dashboard Sinh vi├¬n
+      4)  hiß╗ân thß╗ï dashboard sinh vi├¬n
+      5)  hiß╗ân thß╗ï GPA v├á th├┤ng tin hß╗ìc tß║¡p
+
+  B├ío c├ío
+    Trang B├ío c├ío
+      6)  hiß╗ân thß╗ï trang b├ío c├ío
+      ΓêÜ  c├│ bß╗Ö chß╗ìn loß║íi b├ío c├ío (1205ms)
+    B├ío c├ío Sinh vi├¬n
+      7)  hiß╗ân thß╗ï danh s├ích sinh vi├¬n trong b├ío c├ío
+      8)  lß╗ìc theo khoa
+      9)  lß╗ìc theo lß╗¢p
+    B├ío c├ío ─Éiß╗âm
+      10)  tß║ío b├ío c├ío tß╗òng hß╗úp ─æiß╗âm
+      ΓêÜ  hiß╗ân thß╗ï thß╗æng k├¬ (1275ms)
+    Xuß║Ñt B├ío c├ío
+      ΓêÜ  c├│ c├íc n├║t ─æiß╗üu khiß╗ân tr├¬n trang (1187ms)
+
+  C├ái ─æß║╖t
+    11)  hiß╗ân thß╗ï trang c├ái ─æß║╖t chß╗ë d├ánh cho admin
+    ΓêÜ  hiß╗ân thß╗ï c├íc tab c├ái ─æß║╖t (1209ms)
+    ΓêÜ  c├│ n├║t l╞░u c├ái ─æß║╖t (1180ms)
+
+  ─Éiß╗üu h╞░ß╗¢ng
+    12)  ─æiß╗üu h╞░ß╗¢ng giß╗»a c├íc trang bß║▒ng sidebar
+    13)  ─æ├ính dß║Ñu menu ─æang active
+
+
+  7 passing (1m)
+  13 failing
+
+  1) Dashboard
+       Dashboard Admin
+          hiß╗ân thß╗ï dashboard admin vß╗¢i thß╗æng k├¬:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:13:19)
+
+  2) Dashboard
+       Dashboard Admin
+          hiß╗ân thß╗ï c├íc thß║╗ tß╗òng hß╗úp:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Tß╗òng sß╗æ' within the element: <div.ml-3> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:17:40)
+
+  3) Dashboard
+       Dashboard Gi├ío vi├¬n
+          hiß╗ân thß╗ï dashboard gi├ío vi├¬n:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:34:19)
+
+  4) Dashboard
+       Dashboard Sinh vi├¬n
+          hiß╗ân thß╗ï dashboard sinh vi├¬n:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:50:19)
+
+  5) Dashboard
+       Dashboard Sinh vi├¬n
+          hiß╗ân thß╗ï GPA v├á th├┤ng tin hß╗ìc tß║¡p:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'GPA' within the element: <div.flex.justify-between.border-b.pb-2> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:54:36)
+
+  6) B├ío c├ío
+       Trang B├ío c├ío
+          hiß╗ân thß╗ï trang b├ío c├ío:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'B├ío c├ío v├á Thß╗æng k├¬'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:69:19)
+
+  7) B├ío c├ío
+       B├ío c├ío Sinh vi├¬n
+          hiß╗ân thß╗ï danh s├ích sinh vi├¬n trong b├ío c├ío:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Danh s├ích sinh vi├¬n' within the element: <button.px-4.py-2.rounded-lg.flex.items-center.space-x-2.whitespace-nowrap.bg-gray-200.text-gray-700.hover:bg-gray-300> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:79:23)
+
+  8) B├ío c├ío
+       B├ío c├ío Sinh vi├¬n
+          lß╗ìc theo khoa:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:85:9)
+
+  9) B├ío c├ío
+       B├ío c├ío Sinh vi├¬n
+          lß╗ìc theo lß╗¢p:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:91:9)
+
+  10) B├ío c├ío
+       B├ío c├ío ─Éiß╗âm
+          tß║ío b├ío c├ío tß╗òng hß╗úp ─æiß╗âm:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'B├ío c├ío ─æiß╗âm' within the element: <button.px-4.py-2.rounded-lg.flex.items-center.space-x-2.whitespace-nowrap.bg-gray-200.text-gray-700.hover:bg-gray-300> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:99:23)
+
+  11) C├ái ─æß║╖t
+        hiß╗ân thß╗ï trang c├ái ─æß║╖t chß╗ë d├ánh cho admin:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'C├ái ─æß║╖t Hß╗ç thß╗æng'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:126:17)
+
+  12) ─Éiß╗üu h╞░ß╗¢ng
+        ─æiß╗üu h╞░ß╗¢ng giß╗»a c├íc trang bß║▒ng sidebar:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sinh vi├¬n' within the element: <nav.p-4> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  13) ─Éiß╗üu h╞░ß╗¢ng
+        ─æ├ính dß║Ñu menu ─æang active:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sinh vi├¬n' within the element: <nav.p-4> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        20                                                                               Γöé
+  Γöé Passing:      7                                                                                Γöé
+  Γöé Failing:      13                                                                               Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      0                                                                                Γöé
+  Γöé Screenshots:  13                                                                               Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     1 minute, 15 seconds                                                             Γöé
+  Γöé Spec Ran:     dashboard-reports.cy.js                                                          Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Dashboard Admin --  hiß╗ân thß╗ï dashboard admin vß╗¢i                
+     thß╗æng k├¬ (failed).png                                                                          
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Dashboard Admin --  hiß╗ân thß╗ï c├íc thß║╗ tß╗òng hß╗úp (fa               
+     iled).png                                                                                      
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Dashboard Gi├ío vi├¬n --  hiß╗ân thß╗ï dashboard gi├ío v               
+     i├¬n (failed).png                                                                               
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Dashboard Sinh vi├¬n --  hiß╗ân thß╗ï dashboard sinh v               
+     i├¬n (failed).png                                                                               
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Dashboard Sinh vi├¬n --  hiß╗ân thß╗ï GPA v├á th├┤ng tin               
+      hß╗ìc tß║¡p (failed).png                                                                          
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\B├ío c├ío -- Trang B├ío c├ío --  hiß╗ân thß╗ï trang b├ío c├ío (failed).p               
+     ng                                                                                             
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\B├ío c├ío -- B├ío c├ío Sinh vi├¬n --  hiß╗ân thß╗ï danh s├ích sinh vi├¬n                
+     trong b├ío c├ío (failed).png                                                                     
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\B├ío c├ío -- B├ío c├ío Sinh vi├¬n --  lß╗ìc theo khoa (failed).png                  
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\B├ío c├ío -- B├ío c├ío Sinh vi├¬n --  lß╗ìc theo lß╗¢p (failed).png                   
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\B├ío c├ío -- B├ío c├ío ─Éiß╗âm --  tß║ío b├ío c├ío tß╗òng hß╗úp ─æiß╗âm (failed)               
+     .png                                                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\C├ái ─æß║╖t --  hiß╗ân thß╗ï trang c├ái ─æß║╖t chß╗ë d├ánh cho admin (failed)               
+     .png                                                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\─Éiß╗üu h╞░ß╗¢ng --  ─æiß╗üu h╞░ß╗¢ng giß╗»a c├íc trang bß║▒ng sidebar (failed)               
+     .png                                                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\─Éiß╗üu h╞░ß╗¢ng --  ─æ├ính dß║Ñu menu ─æang active (failed).png                        
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  grades-enrollment.cy.js                                                         (4 of 5)
+
+
+  Quß║ún l├╜ ─Éiß╗âm
+    Xem Danh s├ích ─Éiß╗âm
+      1) "before each" hook for " hiß╗ân thß╗ï trang ─æiß╗âm"
+
+  Xem ─Éiß╗âm cß╗ºa Sinh vi├¬n
+    2) "before each" hook for " hiß╗ân thß╗ï ─æiß╗âm cß╗ºa sinh vi├¬n"
+
+  Quß║ún l├╜ ─É─âng k├╜ Hß╗ìc phß║ºn
+    Xem Danh s├ích ─É─âng k├╜
+      ΓêÜ  hiß╗ân thß╗ï trang ─æ─âng k├╜ hß╗ìc phß║ºn (1200ms)
+      ΓêÜ  hiß╗ân thß╗ï bß║úng ─æ─âng k├╜ (1176ms)
+    Th├¬m ─É─âng k├╜
+      ΓêÜ  mß╗ƒ form ─æ─âng k├╜ hß╗ìc phß║ºn (1271ms)
+      ΓêÜ  ─æ─âng k├╜ sinh vi├¬n v├áo m├┤n hß╗ìc (2190ms)
+    Lß╗ìc ─É─âng k├╜
+      3)  lß╗ìc theo sinh vi├¬n
+      4)  lß╗ìc theo hß╗ìc kß╗│
+
+  Xem ─É─âng k├╜ cß╗ºa Sinh vi├¬n
+    ΓêÜ  hiß╗ân thß╗ï c├íc m├┤n hß╗ìc c├│ thß╗â ─æ─âng k├╜ (1260ms)
+    ΓêÜ  hiß╗ân thß╗ï c├íc m├┤n ─æ├ú ─æ─âng k├╜ (1207ms)
+
+  Quyß╗ün truy cß║¡p ─Éiß╗âm cß╗ºa Gi├ío vi├¬n
+    5) "before each" hook for " cho ph├⌐p gi├ío vi├¬n xem ─æiß╗âm"
+
+
+  6 passing (34s)
+  5 failing
+
+  1) Quß║ún l├╜ ─Éiß╗âm
+       Xem Danh s├ích ─Éiß╗âm
+         "before each" hook for " hiß╗ân thß╗ï trang ─æiß╗âm":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: '─Éiß╗âm' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Quß║ún l├╜ ─Éiß╗âm`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  2) Xem ─Éiß╗âm cß╗ºa Sinh vi├¬n
+       "before each" hook for " hiß╗ân thß╗ï ─æiß╗âm cß╗ºa sinh vi├¬n":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: '─Éiß╗âm cß╗ºa t├┤i' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Xem ─Éiß╗âm cß╗ºa Sinh vi├¬n`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  3) Quß║ún l├╜ ─É─âng k├╜ Hß╗ìc phß║ºn
+       Lß╗ìc ─É─âng k├╜
+          lß╗ìc theo sinh vi├¬n:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/grades-enrollment.cy.js:118:9)
+
+  4) Quß║ún l├╜ ─É─âng k├╜ Hß╗ìc phß║ºn
+       Lß╗ìc ─É─âng k├╜
+          lß╗ìc theo hß╗ìc kß╗│:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/grades-enrollment.cy.js:124:9)
+
+  5) Quyß╗ün truy cß║¡p ─Éiß╗âm cß╗ºa Gi├ío vi├¬n
+       "before each" hook for " cho ph├⌐p gi├ío vi├¬n xem ─æiß╗âm":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: '─Éiß╗âm' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Quyß╗ün truy cß║¡p ─Éiß╗âm cß╗ºa Gi├í...`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        21                                                                               Γöé
+  Γöé Passing:      6                                                                                Γöé
+  Γöé Failing:      5                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      10                                                                               Γöé
+  Γöé Screenshots:  5                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     34 seconds                                                                       Γöé
+  Γöé Spec Ran:     grades-enrollment.cy.js                                                          Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quß║ún l├╜ ─Éiß╗âm --  hiß╗ân thß╗ï trang ─æiß╗âm -- before each hook (fail               
+     ed).png                                                                                        
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Xem ─Éiß╗âm cß╗ºa Sinh vi├¬n --  hiß╗ân thß╗ï ─æiß╗âm cß╗ºa sinh vi├¬n -- befo               
+     re each hook (failed).png                                                                      
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quß║ún l├╜ ─É─âng k├╜ Hß╗ìc phß║ºn -- Lß╗ìc ─É─âng k├╜ --  lß╗ìc theo sinh vi├¬n               
+      (failed).png                                                                                  
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quß║ún l├╜ ─É─âng k├╜ Hß╗ìc phß║ºn -- Lß╗ìc ─É─âng k├╜ --  lß╗ìc theo hß╗ìc kß╗│ (f               
+     ailed).png                                                                                     
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quyß╗ün truy cß║¡p ─Éiß╗âm cß╗ºa Gi├ío vi├¬n --  cho ph├⌐p gi├ío vi├¬n xem ─æ               
+     iß╗âm -- before each hook (failed).png                                                           
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  students.cy.js                                                                  (5 of 5)
+
+
+  Quß║ún l├╜ Sinh vi├¬n
+    Xem Danh s├ích Sinh vi├¬n
+      1) "before each" hook for " hiß╗ân thß╗ï trang danh s├ích sinh vi├¬n"
+
+
+  0 passing (5s)
+  1 failing
+
+  1) Quß║ún l├╜ Sinh vi├¬n
+       Xem Danh s├ích Sinh vi├¬n
+         "before each" hook for " hiß╗ân thß╗ï trang danh s├ích sinh vi├¬n":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sinh vi├¬n' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Quß║ún l├╜ Sinh vi├¬n`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        14                                                                               Γöé
+  Γöé Passing:      0                                                                                Γöé
+  Γöé Failing:      1                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      13                                                                               Γöé
+  Γöé Screenshots:  1                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     5 seconds                                                                        Γöé
+  Γöé Spec Ran:     students.cy.js                                                                   Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quß║ún l├╜ Sinh vi├¬n --  hiß╗ân thß╗ï trang danh s├ích sinh vi├¬n -- before each               
+      hook (failed).png                                                                             
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé ├ù  auth.cy.js                               00:42       11        3        8        -        - Γöé
+  Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+  Γöé ├ù  courses-classes.cy.js                    00:20       12        -        4        -        8 Γöé
+  Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+  Γöé ├ù  dashboard-reports.cy.js                  01:15       20        7       13        -        - Γöé
+  Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+  Γöé ├ù  grades-enrollment.cy.js                  00:34       21        6        5        -       10 Γöé
+  Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+  Γöé ├ù  students.cy.js                           00:05       14        -        1        -       13 Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+    ├ù  5 of 5 failed (100%)                     02:57       78       16       31        -       31  
+

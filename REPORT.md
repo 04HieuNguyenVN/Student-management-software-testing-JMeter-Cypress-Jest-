@@ -3,6 +3,18 @@
 
 ---
 
+# LỜI MỞ ĐẦU
+
+Trong kỷ nguyên số hóa hiện nay, việc ứng dụng công nghệ thông tin vào quản lý giáo dục đã trở thành một xu thế tất yếu. Hệ thống quản lý trường học không chỉ giúp tối ưu hóa quy trình vận hành, giảm tải áp lực hành chính mà còn nâng cao tính chính xác và minh bạch trong công tác đào tạo.
+
+Tuy nhiên, một phần mềm quản lý phức tạp luôn tiềm ẩn những rủi ro về lỗi kỹ thuật, lỗ hổng bảo mật hay sự cố hiệu năng khi lượng truy cập tăng cao. Chính vì vậy, **Kiểm thử phần mềm (Software Testing)** đóng vai trò then chốt, quyết định sự thành bại và độ tin cậy của sản phẩm trước khi đưa vào sử dụng thực tế.
+
+Báo cáo bài tập lớn này trình bày quá trình xây dựng và đặc biệt tập trung vào công tác kiểm thử cho **Hệ thống Quản lý Sinh viên**. Chúng tôi đã áp dụng các phương pháp kiểm thử hiện đại, từ kiểm thử đơn vị (Unit Testing), kiểm thử tích hợp (Integration Testing) đến kiểm thử hiệu năng (Performance Testing), sử dụng các công cụ tiên tiến như **Jest**, **Cypress** và **Apache JMeter**.
+
+Hy vọng rằng, báo cáo này sẽ mang lại cái nhìn tổng quan và chi tiết về quy trình đảm bảo chất lượng phần mềm, cũng như thể hiện được sự nỗ lực tìm tòi, nghiên cứu của nhóm thực hiện.
+
+---
+
 ## MỤC LỤC
 
 1.  [CHƯƠNG 1: TỔNG QUAN BÀI TOÁN](#chương-1-tổng-quan-bài-toán)
@@ -12,6 +24,33 @@
     *   [2.1 Unit Test Case](#21-unit-test-case)
     *   [2.2 Integration Test Case](#22-integration-test-case)
     *   [2.3 System Test Case](#23-system-test-case)
+
+---
+
+# DANH MỤC TỪ VIẾT TẮT
+
+| STT | Chữ viết tắt | Giải thích |
+| :--- | :--- | :--- |
+| 1 | **API** | Application Programming Interface (Giao diện lập trình ứng dụng) |
+| 2 | **BVA** | Boundary Value Analysis (Phân tích giá trị biên) |
+| 3 | **CI/CD** | Continuous Integration / Continuous Deployment (Tích hợp/Triển khai liên tục) |
+| 4 | **CSDL** | Cơ sở dữ liệu |
+| 5 | **DOM** | Document Object Model (Mô hình đối tượng tài liệu) |
+| 6 | **E2E** | End-to-End (Kiểm thử đầu cuối) |
+| 7 | **EP** | Equivalence Partitioning (Phân hoạch tương đương) |
+| 8 | **GPA** | Grade Point Average (Điểm trung bình tích lũy) |
+| 9 | **GV** | Giảng viên |
+| 10 | **JSON** | JavaScript Object Notation |
+| 11 | **JWT** | JSON Web Token |
+| 12 | **POM** | Page Object Model (Mô hình đối tượng trang) |
+| 13 | **QA** | Quality Assurance (Đảm bảo chất lượng) |
+| 14 | **RTL** | React Testing Library |
+| 15 | **SRS** | Software Requirements Specification (Đặc tả yêu cầu phần mềm) |
+| 16 | **SV** | Sinh viên |
+| 17 | **TDD** | Test Driven Development (Phát triển hướng kiểm thử) |
+| 18 | **UAT** | User Acceptance Testing (Kiểm thử chấp nhận người dùng) |
+| 19 | **UI** | User Interface (Giao diện người dùng) |
+| 20 | **UX** | User Experience (Trải nghiệm người dùng) |
 
 ---
 
@@ -1416,3 +1455,25 @@ Bên cạnh những kết quả đạt được, đề tài vẫn còn một s�
     *   Thêm **Security Testing** (Kiểm thử bảo mật) để phát hiện các lỗ hổng như SQL Injection, XSS.
     *   Thêm **Visual Regression Testing** (Kiểm thử hồi quy giao diện) để tự động so sánh ảnh chụp màn hình và phát hiện sai lệch về pixel.
 *   **Tối ưu hóa Test Script:** Refactor lại code test theo mô hình Page Object Model (POM) để tăng khả năng tái sử dụng và dễ bảo trì hơn.
+
+---
+
+# DANH MỤC TÀI LIỆU THAM KHẢO
+
+1.  **Jest Documentation**.
+    *   Nguồn: [https://jestjs.io/docs/getting-started](https://jestjs.io/docs/getting-started)
+    *   Lần cuối truy cập: 10/12/2025
+
+2.  **Cypress Documentation**.
+    *   Nguồn: [https://docs.cypress.io/](https://docs.cypress.io/)
+    *   Lần cuối truy cập: 10/12/2025
+
+3.  **Apache JMeter User's Manual**.
+    *   Nguồn: [https://jmeter.apache.org/usermanual/](https://jmeter.apache.org/usermanual/)
+    *   Lần cuối truy cập: 10/12/2025
+
+4.  **React Testing Library**.
+    *   Nguồn: [https://testing-library.com/docs/react-testing-library/intro/](https://testing-library.com/docs/react-testing-library/intro/)
+    *   Lần cuối truy cập: 10/12/2025
+
+

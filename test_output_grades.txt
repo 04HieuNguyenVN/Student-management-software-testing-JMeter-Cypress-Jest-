@@ -1,0 +1,137 @@
+
+
+DevTools listening on ws://127.0.0.1:57144/devtools/browser/439fa6c0-bfcf-43a9-8d8f-1043abff0a45
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.4                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             │
+  │ Specs:          1 found (grades-enrollment.cy.js)                                              │
+  │ Searched:       G:\Personal Project\KiemThu\student-management-system\cypress\e2e\grades-enrol │
+  │                 lment.cy.js                                                                    │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  grades-enrollment.cy.js                                                         (1 of 1)
+
+
+  Quản lý Điểm
+    Xem Danh sách Điểm
+      1) "before each" hook for " hiển thị trang điểm"
+
+  Xem Điểm của Sinh viên
+    2) "before each" hook for " hiển thị điểm của sinh viên"
+
+  Quản lý Đăng ký Học phần
+    Xem Danh sách Đăng ký
+      √  hiển thị trang đăng ký học phần (1100ms)
+      √  hiển thị bảng đăng ký (1085ms)
+    Thêm Đăng ký
+      √  mở form đăng ký học phần (1211ms)
+      √  đăng ký sinh viên vào môn học (2058ms)
+    Lọc Đăng ký
+      3)  lọc theo sinh viên
+      4)  lọc theo học kỳ
+
+  Xem Đăng ký của Sinh viên
+    √  hiển thị các môn học có thể đăng ký (1048ms)
+    √  hiển thị các môn đã đăng ký (1068ms)
+
+  Quyền truy cập Điểm của Giáo viên
+    5) "before each" hook for " cho phép giáo viên xem điểm"
+
+
+  6 passing (33s)
+  5 failing
+
+  1) Quản lý Điểm
+       Xem Danh sách Điểm
+         "before each" hook for " hiển thị trang điểm":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Điểm' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Quản lý Điểm`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  2) Xem Điểm của Sinh viên
+       "before each" hook for " hiển thị điểm của sinh viên":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Điểm của tôi' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Xem Điểm của Sinh viên`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  3) Quản lý Đăng ký Học phần
+       Lọc Đăng ký
+          lọc theo sinh viên:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/grades-enrollment.cy.js:118:9)
+
+  4) Quản lý Đăng ký Học phần
+       Lọc Đăng ký
+          lọc theo học kỳ:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/grades-enrollment.cy.js:124:9)
+
+  5) Quyền truy cập Điểm của Giáo viên
+       "before each" hook for " cho phép giáo viên xem điểm":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Điểm' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Quyền truy cập Điểm của Giá...`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        21                                                                               │
+  │ Passing:      6                                                                                │
+  │ Failing:      5                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      10                                                                               │
+  │ Screenshots:  5                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     33 seconds                                                                       │
+  │ Spec Ran:     grades-enrollment.cy.js                                                          │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quản lý Điểm --  hiển thị trang điểm -- before each hook (fail               
+     ed).png                                                                                        
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Xem Điểm của Sinh viên --  hiển thị điểm của sinh viên -- befo               
+     re each hook (failed).png                                                                      
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quản lý Đăng ký Học phần -- Lọc Đăng ký --  lọc theo sinh viên               
+      (failed).png                                                                                  
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quản lý Đăng ký Học phần -- Lọc Đăng ký --  lọc theo học kỳ (f               
+     ailed).png                                                                                     
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quyền truy cập Điểm của Giáo viên --  cho phép giáo viên xem đ               
+     iểm -- before each hook (failed).png                                                           
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ×  grades-enrollment.cy.js                  00:33       21        6        5        -       10 │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ×  1 of 1 failed (100%)                     00:33       21        6        5        -       10  
+

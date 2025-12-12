@@ -1,0 +1,371 @@
+﻿
+> student-management-system@0.0.0 test:e2e:headless
+> cypress run
+
+
+node.exe : 
+At line:1 char:1
++ & "C:\nvm4w\nodejs/n
+ode.exe" "C:\nvm4w\nod
+ejs/node_modules/npm/b
+in/np ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (:String) [   
+ ], RemoteExceptio    
+n
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+DevTools listening on 
+ws://127.0.0.1:62191/d
+evtools/browser/e1cd12
+ab-ac49-4ab7-a27f-51f9
+3a37ec4f
+
+====================================================================================================
+
+  (Run Starting)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Cypress:        14.5.4                                                                         Γöé
+  Γöé Browser:        Electron 130 (headless)                                                        Γöé
+  Γöé Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             Γöé
+  Γöé Specs:          5 found (auth.cy.js, courses-classes.cy.js, dashboard-reports.cy.js, grades-en Γöé
+  Γöé                 rollment.cy.js, students.cy.js)                                                Γöé
+  Γöé Searched:       cypress/e2e/**/*.cy.{js,jsx,ts,tsx}                                            Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  auth.cy.js                                                                      (1 of 5)
+
+
+  Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication)
+    Trang ─É─âng nhß║¡p
+      ΓêÜ  hiß╗ân thß╗ï form ─æ─âng nhß║¡p (476ms)
+      ΓêÜ  b├ío lß╗ùi khi ─æß╗â trß╗æng th├┤ng tin ─æ─âng nhß║¡p (264ms)
+      ΓêÜ  b├ío lß╗ùi khi nhß║¡p th├┤ng tin ─æ─âng nhß║¡p sai (810ms)
+    ─É─âng nhß║¡p Admin
+      1)  ─æ─âng nhß║¡p th├ánh c├┤ng vß╗¢i t├ái khoß║ún Admin
+      ΓêÜ  ─æ─âng xuß║Ñt th├ánh c├┤ng (1000ms)
+    ─É─âng nhß║¡p Gi├ío vi├¬n
+      ΓêÜ  ─æ─âng nhß║¡p th├ánh c├┤ng vß╗¢i t├ái khoß║ún Gi├ío vi├¬n (820ms)
+    ─É─âng nhß║¡p Sinh vi├¬n
+      ΓêÜ  ─æ─âng nhß║¡p th├ánh c├┤ng vß╗¢i t├ái khoß║ún Sinh vi├¬n (808ms)
+    Duy tr├¼ Phi├¬n ─æ─âng nhß║¡p
+      2)  giß╗» phi├¬n ─æ─âng nhß║¡p sau khi tß║úi lß║íi trang
+    Bß║úo vß╗ç Route
+      ΓêÜ  chuyß╗ân h╞░ß╗¢ng vß╗ü login khi truy cß║¡p route bß║úo vß╗ç m├á ch╞░a ─æ─âng nhß║¡p (250ms)
+      ΓêÜ  chß║╖n sinh vi├¬n truy cß║¡p route d├ánh cho admin (858ms)
+      ΓêÜ  chß║╖n gi├ío vi├¬n truy cß║¡p route chß╗ë d├ánh cho admin (884ms)
+
+
+  9 passing (17s)
+  2 failing
+
+  1) Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication)
+       ─É─âng nhß║¡p Admin
+          ─æ─âng nhß║¡p th├ánh c├┤ng vß╗¢i t├ái khoß║ún Admin:
+     AssertionError: Timed out retrying after 4000ms: expected '<nav.p-4>' to contain 'Quß║ún l├╜ sinh vi├¬n'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:44:20)
+
+  2) Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication)
+       Duy tr├¼ Phi├¬n ─æ─âng nhß║¡p
+          giß╗» phi├¬n ─æ─âng nhß║¡p sau khi tß║úi lß║íi trang:
+     AssertionError: Timed out retrying after 4000ms: expected '<nav.p-4>' to contain 'Quß║ún l├╜ sinh vi├¬n'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:110:20)
+
+
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        11                                                                               Γöé
+  Γöé Passing:      9                                                                                Γöé
+  Γöé Failing:      2                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      0                                                                                Γöé
+  Γöé Screenshots:  2                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     16 seconds                                                                       Γöé
+  Γöé Spec Ran:     auth.cy.js                                                                       Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication) -- ─É─âng nhß║¡p Admin --  ─æ─âng nhß║¡p th├ánh c               
+     ├┤ng vß╗¢i t├ái khoß║ún Admin (failed).png                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Kiß╗âm thß╗¡ X├íc thß╗▒c (Authentication) -- Duy tr├¼ Phi├¬n ─æ─âng nhß║¡p --  giß╗» phi├¬n               
+      ─æ─âng nhß║¡p sau khi tß║úi lß║íi trang (failed).png                                                  
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  courses-classes.cy.js                                                           (2 of 5)
+
+
+  Quß║ún l├╜ M├┤n hß╗ìc
+    Xem Danh s├ích M├┤n hß╗ìc
+      ΓêÜ  hiß╗ân thß╗ï trang m├┤n hß╗ìc (1409ms)
+      ΓêÜ  hiß╗ân thß╗ï bß║úng m├┤n hß╗ìc (1123ms)
+    Th├¬m M├┤n hß╗ìc
+      ΓêÜ  mß╗ƒ form th├¬m m├┤n hß╗ìc (1197ms)
+      ΓêÜ  th├¬m m├┤n hß╗ìc mß╗¢i th├ánh c├┤ng (2948ms)
+    T├¼m kiß║┐m M├┤n hß╗ìc
+      ΓêÜ  t├¼m kiß║┐m m├┤n hß╗ìc theo t├¬n (1668ms)
+
+  Quß║ún l├╜ Lß╗¢p hß╗ìc
+    Xem Danh s├ích Lß╗¢p hß╗ìc
+      ΓêÜ  hiß╗ân thß╗ï trang lß╗¢p hß╗ìc (1096ms)
+      ΓêÜ  hiß╗ân thß╗ï bß║úng lß╗¢p hß╗ìc (1112ms)
+    Th├¬m Lß╗¢p hß╗ìc
+      ΓêÜ  mß╗ƒ form th├¬m lß╗¢p hß╗ìc (1212ms)
+      ΓêÜ  th├¬m lß╗¢p hß╗ìc mß╗¢i th├ánh c├┤ng (3011ms)
+    Chi tiß║┐t Lß╗¢p hß╗ìc
+      ΓêÜ  c├│ thß╗â xem danh s├ích sinh vi├¬n cß╗ºa lß╗¢p (1508ms)
+
+  Quyß╗ün truy cß║¡p M├┤n hß╗ìc cß╗ºa Gi├ío vi├¬n
+    ΓêÜ  cho ph├⌐p gi├ío vi├¬n xem m├┤n hß╗ìc (1065ms)
+    ΓêÜ  cho ph├⌐p gi├ío vi├¬n xem lß╗¢p hß╗ìc (1065ms)
+
+
+  12 passing (19s)
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        12                                                                               Γöé
+  Γöé Passing:      12                                                                               Γöé
+  Γöé Failing:      0                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      0                                                                                Γöé
+  Γöé Screenshots:  0                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     18 seconds                                                                       Γöé
+  Γöé Spec Ran:     courses-classes.cy.js                                                            Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  dashboard-reports.cy.js                                                         (3 of 5)
+
+
+  Dashboard
+    Dashboard Admin
+      ΓêÜ  hiß╗ân thß╗ï dashboard admin vß╗¢i thß╗æng k├¬ (966ms)
+      ΓêÜ  hiß╗ân thß╗ï c├íc thß║╗ tß╗òng hß╗úp (726ms)
+      ΓêÜ  hiß╗ân thß╗ï nß╗Öi dung dashboard (704ms)
+    Dashboard Gi├ío vi├¬n
+      ΓêÜ  hiß╗ân thß╗ï dashboard gi├ío vi├¬n (667ms)
+      ΓêÜ  hiß╗ân thß╗ï th├┤ng tin d├ánh cho gi├ío vi├¬n (657ms)
+    Dashboard Sinh vi├¬n
+      ΓêÜ  hiß╗ân thß╗ï dashboard sinh vi├¬n (663ms)
+      ΓêÜ  hiß╗ân thß╗ï GPA v├á th├┤ng tin hß╗ìc tß║¡p (683ms)
+
+  B├ío c├ío
+    Trang B├ío c├ío
+      ΓêÜ  hiß╗ân thß╗ï trang b├ío c├ío (1116ms)
+      ΓêÜ  c├│ bß╗Ö chß╗ìn loß║íi b├ío c├ío (1158ms)
+    B├ío c├ío Sinh vi├¬n
+      ΓêÜ  hiß╗ân thß╗ï danh s├ích sinh vi├¬n trong b├ío c├ío (1509ms)
+      ΓêÜ  lß╗ìc theo khoa (1958ms)
+      ΓêÜ  lß╗ìc theo lß╗¢p (2001ms)
+    B├ío c├ío ─Éiß╗âm
+      ΓêÜ  tß║ío b├ío c├ío tß╗òng hß╗úp ─æiß╗âm (1543ms)
+      ΓêÜ  hiß╗ân thß╗ï thß╗æng k├¬ (1557ms)
+    Xuß║Ñt B├ío c├ío
+      ΓêÜ  c├│ c├íc n├║t ─æiß╗üu khiß╗ân tr├¬n trang (1126ms)
+
+  C├ái ─æß║╖t
+    ΓêÜ  hiß╗ân thß╗ï trang c├ái ─æß║╖t chß╗ë d├ánh cho admin (1109ms)
+    ΓêÜ  hiß╗ân thß╗ï c├íc tab c├ái ─æß║╖t (1124ms)
+    ΓêÜ  c├│ n├║t l╞░u c├ái ─æß║╖t (1150ms)
+
+  ─Éiß╗üu h╞░ß╗¢ng
+    1)  ─æiß╗üu h╞░ß╗¢ng giß╗»a c├íc trang bß║▒ng sidebar
+    2)  ─æ├ính dß║Ñu menu ─æang active
+
+
+  18 passing (31s)
+  2 failing
+
+  1) ─Éiß╗üu h╞░ß╗¢ng
+        ─æiß╗üu h╞░ß╗¢ng giß╗»a c├íc trang bß║▒ng sidebar:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Quß║ún l├╜ sinh vi├¬n' within the element: <nav.p-4> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  2) ─Éiß╗üu h╞░ß╗¢ng
+        ─æ├ính dß║Ñu menu ─æang active:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Quß║ún l├╜ sinh vi├¬n' within the element: <nav.p-4> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        20                                                                               Γöé
+  Γöé Passing:      18                                                                               Γöé
+  Γöé Failing:      2                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      0                                                                                Γöé
+  Γöé Screenshots:  2                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     30 seconds                                                                       Γöé
+  Γöé Spec Ran:     dashboard-reports.cy.js                                                          Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\─Éiß╗üu h╞░ß╗¢ng --  ─æiß╗üu h╞░ß╗¢ng giß╗»a c├íc trang bß║▒ng sidebar (failed)               
+     .png                                                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\─Éiß╗üu h╞░ß╗¢ng --  ─æ├ính dß║Ñu menu ─æang active (failed).png                        
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  grades-enrollment.cy.js                                                         (4 of 5)
+
+
+  Quß║ún l├╜ ─Éiß╗âm
+    Xem Danh s├ích ─Éiß╗âm
+      ΓêÜ  hiß╗ân thß╗ï trang ─æiß╗âm (1369ms)
+      ΓêÜ  hiß╗ân thß╗ï bß║úng ─æiß╗âm (1136ms)
+    Lß╗ìc ─Éiß╗âm
+      ΓêÜ  lß╗ìc theo lß╗¢p (1616ms)
+      ΓêÜ  lß╗ìc theo m├┤n hß╗ìc (1572ms)
+    Th├¬m/Sß╗¡a ─Éiß╗âm
+      ΓêÜ  cho ph├⌐p sß╗¡a ─æiß╗âm trß╗▒c tiß║┐p (1205ms)
+      ΓêÜ  kiß╗âm tra t├¡nh to├ín ─æiß╗âm trung b├¼nh (2392ms)
+    Thß╗æng k├¬ ─Éiß╗âm
+      ΓêÜ  hiß╗ân thß╗ï phß║ºn thß╗æng k├¬ ─æiß╗âm (1102ms)
+
+  Xem ─Éiß╗âm cß╗ºa Sinh vi├¬n
+    ΓêÜ  hiß╗ân thß╗ï ─æiß╗âm cß╗ºa sinh vi├¬n (1074ms)
+    ΓêÜ  hiß╗ân thß╗ï th├┤ng tin GPA (1056ms)
+    ΓêÜ  hiß╗ân thß╗ï bß║úng ─æiß╗âm (1077ms)
+    ΓêÜ Kh├┤ng  cho ph├⌐p sß╗¡a ─æiß╗âm (1043ms)
+
+  Quß║ún l├╜ ─É─âng k├╜ Hß╗ìc phß║ºn
+    Xem Danh s├ích ─É─âng k├╜
+      ΓêÜ  hiß╗ân thß╗ï trang ─æ─âng k├╜ hß╗ìc phß║ºn (1072ms)
+      ΓêÜ  hiß╗ân thß╗ï bß║úng ─æ─âng k├╜ (1059ms)
+    Th├¬m ─É─âng k├╜
+      ΓêÜ  mß╗ƒ form ─æ─âng k├╜ hß╗ìc phß║ºn (1181ms)
+      ΓêÜ  ─æ─âng k├╜ sinh vi├¬n v├áo m├┤n hß╗ìc (2042ms)
+    Lß╗ìc ─É─âng k├╜
+      ΓêÜ  lß╗ìc theo sinh vi├¬n (1553ms)
+      ΓêÜ  lß╗ìc theo hß╗ìc kß╗│ (1594ms)
+
+  Xem ─É─âng k├╜ cß╗ºa Sinh vi├¬n
+    ΓêÜ  hiß╗ân thß╗ï c├íc m├┤n hß╗ìc c├│ thß╗â ─æ─âng k├╜ (1061ms)
+    ΓêÜ  hiß╗ân thß╗ï c├íc m├┤n ─æ├ú ─æ─âng k├╜ (1078ms)
+
+  Quyß╗ün truy cß║¡p ─Éiß╗âm cß╗ºa Gi├ío vi├¬n
+    ΓêÜ  cho ph├⌐p gi├ío vi├¬n xem ─æiß╗âm (1134ms)
+    ΓêÜ  cho ph├⌐p gi├ío vi├¬n nhß║¡p ─æiß╗âm (1092ms)
+
+
+  21 passing (28s)
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        21                                                                               Γöé
+  Γöé Passing:      21                                                                               Γöé
+  Γöé Failing:      0                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      0                                                                                Γöé
+  Γöé Screenshots:  0                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     28 seconds                                                                       Γöé
+  Γöé Spec Ran:     grades-enrollment.cy.js                                                          Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+                                                                                                    
+  Running:  students.cy.js                                                                  (5 of 5)
+
+
+  Quß║ún l├╜ Sinh vi├¬n
+    Xem Danh s├ích Sinh vi├¬n
+      1) "before each" hook for " hiß╗ân thß╗ï trang danh s├ích sinh vi├¬n"
+
+
+  0 passing (5s)
+  1 failing
+
+  1) Quß║ún l├╜ Sinh vi├¬n
+       Xem Danh s├ích Sinh vi├¬n
+         "before each" hook for " hiß╗ân thß╗ï trang danh s├ích sinh vi├¬n":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Quß║ún l├╜ sinh vi├¬n' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Quß║ún l├╜ Sinh vi├¬n`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+
+
+
+  (Results)
+
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé Tests:        14                                                                               Γöé
+  Γöé Passing:      0                                                                                Γöé
+  Γöé Failing:      1                                                                                Γöé
+  Γöé Pending:      0                                                                                Γöé
+  Γöé Skipped:      13                                                                               Γöé
+  Γöé Screenshots:  1                                                                                Γöé
+  Γöé Video:        false                                                                            Γöé
+  Γöé Duration:     5 seconds                                                                        Γöé
+  Γöé Spec Ran:     students.cy.js                                                                   Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quß║ún l├╜ Sinh vi├¬n --  hiß╗ân thß╗ï trang danh s├ích sinh vi├¬n -- before each               
+      hook (failed).png                                                                             
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+  Γöé ├ù  auth.cy.js                               00:16       11        9        2        -        - Γöé
+  Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+  Γöé ΓêÜ  courses-classes.cy.js                    00:18       12       12        -        -        - Γöé
+  Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+  Γöé ├ù  dashboard-reports.cy.js                  00:30       20       18        2        -        - Γöé
+  Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+  Γöé ΓêÜ  grades-enrollment.cy.js                  00:28       21       21        -        -        - Γöé
+  Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+  Γöé ├ù  students.cy.js                           00:05       14        -        1        -       13 Γöé
+  ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+    ├ù  3 of 5 failed (60%)                      01:40       78       60        5        -       13  
+

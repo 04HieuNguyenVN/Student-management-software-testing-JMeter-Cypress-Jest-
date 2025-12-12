@@ -166,6 +166,7 @@ const Classes = () => {
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
                     required
+                    name="code"
                   />
                 </div>
 
@@ -181,6 +182,7 @@ const Classes = () => {
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
                     required
+                    name="className"
                   />
                 </div>
 
@@ -197,6 +199,7 @@ const Classes = () => {
                       })
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    name="departmentId"
                   >
                     <option value="">Chọn khoa</option>
                     {MOCK_DEPARTMENTS.map((dept) => (
@@ -219,6 +222,7 @@ const Classes = () => {
                     }
                     placeholder="VD: 2023-2024"
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    name="academicYear"
                   />
                 </div>
 
@@ -237,6 +241,7 @@ const Classes = () => {
                     }
                     min="1"
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    name="capacity"
                   />
                 </div>
               </div>

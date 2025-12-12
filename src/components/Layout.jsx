@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import PropTypes from "prop-types";
 import {
@@ -15,6 +15,7 @@ import {
 const Layout = ({ children }) => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogout = () => {
     logout();
@@ -29,7 +30,7 @@ const Layout = ({ children }) => {
     if (user?.role === "admin") {
       return [
         ...commonItems,
-        { path: "/students", label: "Quản lý sinh viên", icon: Users },
+        // { path: "/students", label: "Quản lý sinh viên", icon: Users },
         { path: "/subjects", label: "Quản lý môn học", icon: BookOpen },
         { path: "/classes", label: "Quản lý lớp học", icon: Users },
         { path: "/grades", label: "Quản lý điểm", icon: GraduationCap },
@@ -46,7 +47,7 @@ const Layout = ({ children }) => {
         { path: "/subjects", label: "Môn học", icon: BookOpen },
         { path: "/classes", label: "Lớp học", icon: Users },
         { path: "/grades", label: "Quản lý điểm", icon: GraduationCap },
-        { path: "/enrollment", label: "Đăng ký HP", icon: FileText },
+        { path: "/enrollment", label: "Đăng ký học phần", icon: FileText },
         { path: "/reports", label: "Báo cáo", icon: BarChart3 },
       ];
     }
@@ -77,17 +78,22 @@ const Layout = ({ children }) => {
 
         <nav className="p-4">
           <ul className="space-y-2">
-            {getMenuItems().map((item) => (
-              <li key={item.path}>
-                <Link
-                  to={item.path}
-                  className="flex items-center space-x-3 p-3 rounded hover:bg-blue-700 transition-colors"
-                >
-                  <item.icon size={20} />
-                  <span>{item.label}</span>
-                </Link>
-              </li>
-            ))}
+            {getMenuItems().map((item) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
+                    className={`flex items-center space-x-3 p-3 rounded transition-colors ${
+                      isActive ? "bg-blue-900" : "hover:bg-blue-700"
+                    }`}
+                  >
+                    <item.icon size={20} />
+                    <span>{item.label}</span>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 

@@ -1,0 +1,168 @@
+
+
+DevTools listening on ws://127.0.0.1:60225/devtools/browser/ccf05835-886e-41db-bfec-1856a3fe0b59
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.4                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             │
+  │ Specs:          1 found (grades-enrollment.cy.js)                                              │
+  │ Searched:       G:\Personal Project\KiemThu\student-management-system\cypress\e2e\grades-enrol │
+  │                 lment.cy.js                                                                    │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  grades-enrollment.cy.js                                                         (1 of 1)
+
+
+  Quản lý Điểm
+    Xem Danh sách Điểm
+      1)  hiển thị trang điểm
+      √  hiển thị bảng điểm (1181ms)
+    Lọc Điểm
+      √  lọc theo lớp (1628ms)
+      √  lọc theo môn học (1639ms)
+    Thêm/Sửa Điểm
+      2)  mở form nhập điểm
+      3)  kiểm tra phạm vi điểm hợp lệ
+    Thống kê Điểm
+      √  hiển thị phần thống kê điểm (1196ms)
+
+  Xem Điểm của Sinh viên
+    √  hiển thị điểm của sinh viên (1068ms)
+    √  hiển thị thông tin GPA (1042ms)
+    √  hiển thị bảng điểm (1059ms)
+    √ Không  cho phép sửa điểm (1058ms)
+
+  Quản lý Đăng ký Học phần
+    Xem Danh sách Đăng ký
+      √  hiển thị trang đăng ký học phần (1086ms)
+      √  hiển thị bảng đăng ký (1081ms)
+    Thêm Đăng ký
+      √  mở form đăng ký học phần (1136ms)
+      4)  đăng ký sinh viên vào môn học
+    Lọc Đăng ký
+      √  lọc theo sinh viên (1647ms)
+      √  lọc theo học kỳ (1661ms)
+
+  Xem Đăng ký của Sinh viên
+    √  hiển thị các môn học có thể đăng ký (1165ms)
+    √  hiển thị các môn đã đăng ký (1137ms)
+
+  Quyền truy cập Điểm của Giáo viên
+    √  cho phép giáo viên xem điểm (1089ms)
+    5)  cho phép giáo viên nhập điểm
+
+
+  16 passing (48s)
+  5 failing
+
+  1) Quản lý Điểm
+       Xem Danh sách Điểm
+          hiển thị trang điểm:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'Quản lý Điểm'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/grades-enrollment.cy.js:14:19)
+
+  2) Quản lý Điểm
+       Thêm/Sửa Điểm
+          mở form nhập điểm:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Nhập điểm' within the element: <button.text-blue-600.hover:text-blue-900> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/grades-enrollment.cy.js:38:23)
+
+  3) Quản lý Điểm
+       Thêm/Sửa Điểm
+          kiểm tra phạm vi điểm hợp lệ:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Nhập điểm' within the element: <button.text-blue-600.hover:text-blue-900> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/grades-enrollment.cy.js:43:23)
+
+  4) Quản lý Đăng ký Học phần
+       Thêm Đăng ký
+          đăng ký sinh viên vào môn học:
+     CypressError: Timed out retrying after 4050ms: `cy.select()` failed because this element:
+
+`<select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">...</select>`
+
+is being covered by another element:
+
+`<label class="block text-sm font-medium text-gray-700 mb-2">...</label>`
+
+Fix this problem, or use {force: true} to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with
+      at ensureIsDescendent (http://localhost:5173/__cypress/runner/cypress_runner.js:114504:68)
+      at ensureDescendents (http://localhost:5173/__cypress/runner/cypress_runner.js:114555:5)
+      at ensureDescendentsAndScroll (http://localhost:5173/__cypress/runner/cypress_runner.js:114561:14)
+      at ensureElIsNotCovered (http://localhost:5173/__cypress/runner/cypress_runner.js:114692:5)
+      at runAllChecks (http://localhost:5173/__cypress/runner/cypress_runner.js:114891:52)
+      at retryActionability (http://localhost:5173/__cypress/runner/cypress_runner.js:114928:16)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise.attempt.Promise.try (http://localhost:5173/__cypress/runner/cypress_runner.js:4285:29)
+      at whenStable (http://localhost:5173/__cypress/runner/cypress_runner.js:147344:68)
+      at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:147285:14)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise._settlePromiseFromHandler (http://localhost:5173/__cypress/runner/cypress_runner.js:1489:31)
+      at Promise._settlePromise (http://localhost:5173/__cypress/runner/cypress_runner.js:1546:18)
+      at Promise._settlePromise0 (http://localhost:5173/__cypress/runner/cypress_runner.js:1591:10)
+      at Promise._settlePromises (http://localhost:5173/__cypress/runner/cypress_runner.js:1671:18)
+      at Promise._fulfill (http://localhost:5173/__cypress/runner/cypress_runner.js:1615:18)
+      at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:5420:46)
+
+  5) Quyền truy cập Điểm của Giáo viên
+        cho phép giáo viên nhập điểm:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Nhập điểm' within the element: <button.text-blue-600.hover:text-blue-900> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/grades-enrollment.cy.js:161:43)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        21                                                                               │
+  │ Passing:      16                                                                               │
+  │ Failing:      5                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  5                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     47 seconds                                                                       │
+  │ Spec Ran:     grades-enrollment.cy.js                                                          │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quản lý Điểm -- Xem Danh sách Điểm --  hiển thị trang điểm (fa               
+     iled).png                                                                                      
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quản lý Điểm -- ThêmSửa Điểm --  mở form nhập điểm (failed).pn               
+     g                                                                                              
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quản lý Điểm -- ThêmSửa Điểm --  kiểm tra phạm vi điểm hợp lệ                
+     (failed).png                                                                                   
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quản lý Đăng ký Học phần -- Thêm Đăng ký --  đăng ký sinh viên               
+      vào môn học (failed).png                                                                      
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quyền truy cập Điểm của Giáo viên --  cho phép giáo viên nhập                
+     điểm (failed).png                                                                              
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ×  grades-enrollment.cy.js                  00:47       21       16        5        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ×  1 of 1 failed (100%)                     00:47       21       16        5        -        -  
+

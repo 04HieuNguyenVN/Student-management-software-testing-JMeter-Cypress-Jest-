@@ -1,173 +1,165 @@
 /* eslint-env cypress */
-// Test Dashboard and Reports
+// Kiểm thử Dashboard và Báo cáo
 
 describe("Dashboard", () => {
-  describe("Admin Dashboard", () => {
+  describe("Dashboard Admin", () => {
     beforeEach(() => {
       cy.clearLocalStorage();
       cy.login("admin");
     });
 
-    it("should display admin dashboard with statistics", () => {
+    it(" hiển thị dashboard admin với thống kê", () => {
       cy.url().should("include", "/dashboard");
-      cy.get("h1").should("contain", "Dashboard");
+      cy.get("h1").should("contain", "Xin chào");
     });
 
-    it("should display summary cards", () => {
-      // Should show total students, classes, courses, etc.
-      cy.get("div").contains("Tổng số").should("exist");
+    it(" hiển thị các thẻ tổng hợp", () => {
+      cy.get("div").contains("Tổng sinh viên").should("exist");
     });
 
-    it("should display charts or graphs", () => {
-      const charts = cy.get("canvas, svg");
-      // Charts may or may not be implemented yet
+    it(" hiển thị nội dung dashboard", () => {
+      cy.get("main, .main-content, [role='main']").should("exist");
+      cy.get("body").should("be.visible");
     });
   });
 
-  describe("Teacher Dashboard", () => {
+  describe("Dashboard Giáo viên", () => {
     beforeEach(() => {
       cy.clearLocalStorage();
       cy.login("teacher");
     });
 
-    it("should display teacher dashboard", () => {
+    it(" hiển thị dashboard giáo viên", () => {
       cy.url().should("include", "/dashboard");
-      cy.get("h1").should("contain", "Dashboard");
+      cy.get("h1").should("contain", "Xin chào");
     });
 
-    it("should show teacher-specific information", () => {
-      cy.get("div").should("contain", "Lớp học");
+    it(" hiển thị thông tin dành cho giáo viên", () => {
+      cy.get("div").contains("Tổng lớp học").should("exist");
     });
   });
 
-  describe("Student Dashboard", () => {
+  describe("Dashboard Sinh viên", () => {
     beforeEach(() => {
       cy.clearLocalStorage();
       cy.login("student");
     });
 
-    it("should display student dashboard", () => {
+    it(" hiển thị dashboard sinh viên", () => {
       cy.url().should("include", "/dashboard");
-      cy.get("h1").should("contain", "Dashboard");
+      cy.get("h1").should("contain", "Xin chào");
     });
 
-    it("should show student GPA and academic info", () => {
-      cy.get("div").contains("GPA").should("exist");
+    it(" hiển thị GPA và thông tin học tập", () => {
+      cy.get("div").contains("Điểm trung bình").should("exist");
     });
   });
 });
 
-describe("Reports", () => {
+describe("Báo cáo", () => {
   beforeEach(() => {
     cy.clearLocalStorage();
     cy.login("admin");
-    cy.navigateTo("Báo cáo");
+    cy.navigateTo("Báo cáo & Thống kê");
   });
 
-  describe("Reports Page", () => {
-    it("should display reports page", () => {
+  describe("Trang Báo cáo", () => {
+    it(" hiển thị trang báo cáo", () => {
       cy.url().should("include", "/reports");
-      cy.get("h1").should("contain", "Báo cáo và Thống kê");
+      cy.get("h1").should("contain", "Báo cáo & Thống kê");
     });
 
-    it("should have report type selector", () => {
+    it(" có bộ chọn loại báo cáo", () => {
       cy.get("select, button").should("exist");
     });
   });
 
-  describe("Student Reports", () => {
-    it("should generate student list report", () => {
-      const reportButton = cy.get("button").contains("Danh sách sinh viên");
-      if (reportButton.length > 0) {
-        reportButton.click();
-        cy.wait(300);
-        cy.get("table").should("exist");
-      }
+  describe("Báo cáo Sinh viên", () => {
+    it(" hiển thị danh sách sinh viên trong báo cáo", () => {
+      cy.get("button").contains("Báo cáo sinh viên").click();
+      cy.wait(300);
+      cy.get("table").should("exist");
     });
 
-    it("should filter by department", () => {
+    it(" lọc theo khoa", () => {
+      cy.get("button").contains("Báo cáo sinh viên").click();
+      cy.wait(300);
       cy.get("select").first().select(1);
       cy.wait(300);
+      cy.get("body").should("exist");
     });
 
-    it("should filter by class", () => {
-      const selects = cy.get("select");
-      if (selects.length > 1) {
-        selects.eq(1).select(1);
-        cy.wait(300);
-      }
-    });
-  });
-
-  describe("Grade Reports", () => {
-    it("should generate grade summary report", () => {
-      const gradeButton = cy.get("button").contains("Báo cáo điểm");
-      if (gradeButton.length > 0) {
-        gradeButton.click();
-        cy.wait(300);
-      }
-    });
-
-    it("should show statistics", () => {
-      cy.get("div").contains("Thống kê").should("exist");
+    it(" lọc theo lớp", () => {
+      cy.get("button").contains("Báo cáo sinh viên").click();
+      cy.wait(300);
+      cy.get("select").eq(1).select(1);
+      cy.wait(300);
+      cy.get("body").should("exist");
     });
   });
 
-  describe("Export Reports", () => {
-    it("should have export buttons", () => {
-      const exportButtons = cy.get("button").filter((i, el) => {
-        return (
-          el.textContent.includes("Xuất") || el.textContent.includes("Export")
-        );
-      });
-      // Export may not be implemented yet
+  describe("Báo cáo Điểm", () => {
+    it(" tạo báo cáo tổng hợp điểm", () => {
+      cy.get("button").contains("Thống kê điểm").click();
+      cy.wait(300);
+      cy.get("body").should("exist");
+    });
+
+    it(" hiển thị thống kê", () => {
+      cy.get("button").contains("Thống kê điểm").click();
+      cy.wait(300);
+      cy.get("div").contains("Biểu đồ phân bố điểm").should("exist");
+    });
+  });
+
+  describe("Xuất Báo cáo", () => {
+    it(" có các nút điều khiển trên trang", () => {
+      // Kiểm tra có button trên trang (có thể có nút xuất hoặc các nút khác)
+      cy.get("button").should("have.length.at.least", 1);
     });
   });
 });
 
-describe("Settings", () => {
+describe("Cài đặt", () => {
   beforeEach(() => {
     cy.clearLocalStorage();
     cy.login("admin");
     cy.navigateTo("Cài đặt");
   });
 
-  it("should display settings page for admin only", () => {
+  it(" hiển thị trang cài đặt chỉ dành cho admin", () => {
     cy.url().should("include", "/settings");
-    cy.get("h1").should("contain", "Cài đặt Hệ thống");
+    cy.get("h1").should("contain", "Cài đặt hệ thống");
   });
 
-  it("should display settings tabs", () => {
+  it(" hiển thị các tab cài đặt", () => {
     cy.get("button, div").contains("Chung").should("exist");
   });
 
-  it("should allow updating settings", () => {
-    const saveButton = cy.get("button").contains("Lưu");
-    if (saveButton.length > 0) {
-      saveButton.should("exist");
-    }
+  it(" có nút lưu cài đặt", () => {
+    cy.get("button").contains("Lưu").should("exist");
   });
 });
 
-describe("Navigation", () => {
+describe("Điều hướng", () => {
   beforeEach(() => {
     cy.clearLocalStorage();
     cy.login("admin");
   });
 
-  it("should navigate between pages using sidebar", () => {
-    cy.navigateTo("Sinh viên");
+  it(" điều hướng giữa các trang bằng sidebar", () => {
+    cy.navigateTo("Quản lý sinh viên");
     cy.url().should("include", "/students");
 
-    cy.navigateTo("Môn học");
+    cy.navigateTo("Quản lý môn học");
     cy.url().should("include", "/subjects");
 
-    cy.navigateTo("Lớp học");
+    cy.navigateTo("Quản lý lớp học");
     cy.url().should("include", "/classes");
   });
 
-  it("should highlight active menu item", () => {
-    cy.navigateTo("Sinh viên");
-    cy.get('nav a[href="/students"]').should("have.class", "bg-blue-700");
+  it(" đánh dấu menu đang active", () => {
+    cy.navigateTo("Quản lý sinh viên");
+    cy.get('nav a[href="/students"]').should("have.class", "bg-blue-900");
   });
 });

@@ -1,0 +1,300 @@
+
+> student-management-system@0.0.0 test:e2e:headless
+> cypress run
+
+
+
+DevTools listening on ws://127.0.0.1:50922/devtools/browser/64bbc645-5312-460f-85dc-f4839387c9a5
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.4                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             │
+  │ Specs:          5 found (auth.cy.js, courses-classes.cy.js, dashboard-reports.cy.js, grades-en │
+  │                 rollment.cy.js, students.cy.js)                                                │
+  │ Searched:       cypress/e2e/**/*.cy.{js,jsx,ts,tsx}                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  auth.cy.js                                                                      (1 of 5)
+
+
+  Kiểm thử Xác thực (Authentication)
+    Trang Đăng nhập
+      √  hiển thị form đăng nhập (571ms)
+      √  báo lỗi khi để trống thông tin đăng nhập (423ms)
+      √  báo lỗi khi nhập thông tin đăng nhập sai (877ms)
+    Đăng nhập Admin
+      √  đăng nhập thành công với tài khoản Admin (846ms)
+      √  đăng xuất thành công (879ms)
+    Đăng nhập Giáo viên
+      √  đăng nhập thành công với tài khoản Giáo viên (738ms)
+    Đăng nhập Sinh viên
+      √  đăng nhập thành công với tài khoản Sinh viên (747ms)
+    Duy trì Phiên đăng nhập
+      √  giữ phiên đăng nhập sau khi tải lại trang (884ms)
+    Bảo vệ Route
+      √  chuyển hướng về login khi truy cập route bảo vệ mà chưa đăng nhập (236ms)
+      √  chặn sinh viên truy cập route dành cho admin (948ms)
+      √  chặn giáo viên truy cập route chỉ dành cho admin (984ms)
+
+
+  11 passing (8s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        11                                                                               │
+  │ Passing:      11                                                                               │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     8 seconds                                                                        │
+  │ Spec Ran:     auth.cy.js                                                                       │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  courses-classes.cy.js                                                           (2 of 5)
+
+
+  Quản lý Môn học
+    Xem Danh sách Môn học
+      √  hiển thị trang môn học (1398ms)
+      √  hiển thị bảng môn học (1151ms)
+    Thêm Môn học
+      √  mở form thêm môn học (1229ms)
+      √  thêm môn học mới thành công (3060ms)
+    Tìm kiếm Môn học
+      √  tìm kiếm môn học theo tên (1683ms)
+
+  Quản lý Lớp học
+    Xem Danh sách Lớp học
+      √  hiển thị trang lớp học (1149ms)
+      √  hiển thị bảng lớp học (1138ms)
+    Thêm Lớp học
+      √  mở form thêm lớp học (1285ms)
+      √  thêm lớp học mới thành công (3017ms)
+    Chi tiết Lớp học
+      √  có thể xem danh sách sinh viên của lớp (1497ms)
+
+  Quyền truy cập Môn học của Giáo viên
+    √  cho phép giáo viên xem môn học (1111ms)
+    √  cho phép giáo viên xem lớp học (1105ms)
+
+
+  12 passing (19s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        12                                                                               │
+  │ Passing:      12                                                                               │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     19 seconds                                                                       │
+  │ Spec Ran:     courses-classes.cy.js                                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  dashboard-reports.cy.js                                                         (3 of 5)
+
+
+  Dashboard
+    Dashboard Admin
+      √  hiển thị dashboard admin với thống kê (1046ms)
+      √  hiển thị các thẻ tổng hợp (741ms)
+      √  hiển thị nội dung dashboard (711ms)
+    Dashboard Giáo viên
+      √  hiển thị dashboard giáo viên (656ms)
+      √  hiển thị thông tin dành cho giáo viên (675ms)
+    Dashboard Sinh viên
+      √  hiển thị dashboard sinh viên (714ms)
+      √  hiển thị GPA và thông tin học tập (671ms)
+
+  Báo cáo
+    Trang Báo cáo
+      √  hiển thị trang báo cáo (1129ms)
+      √  có bộ chọn loại báo cáo (1143ms)
+    Báo cáo Sinh viên
+      √  hiển thị danh sách sinh viên trong báo cáo (1529ms)
+      √  lọc theo khoa (1999ms)
+      √  lọc theo lớp (1918ms)
+    Báo cáo Điểm
+      √  tạo báo cáo tổng hợp điểm (1494ms)
+      √  hiển thị thống kê (1548ms)
+    Xuất Báo cáo
+      √  có các nút điều khiển trên trang (1149ms)
+
+  Cài đặt
+    √  hiển thị trang cài đặt chỉ dành cho admin (1159ms)
+    √  hiển thị các tab cài đặt (1148ms)
+    √  có nút lưu cài đặt (1146ms)
+
+  Điều hướng
+    √  điều hướng giữa các trang bằng sidebar (1881ms)
+    √  đánh dấu menu đang active (1136ms)
+
+
+  20 passing (24s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        20                                                                               │
+  │ Passing:      20                                                                               │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     24 seconds                                                                       │
+  │ Spec Ran:     dashboard-reports.cy.js                                                          │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  grades-enrollment.cy.js                                                         (4 of 5)
+
+
+  Quản lý Điểm
+    Xem Danh sách Điểm
+      √  hiển thị trang điểm (1439ms)
+      √  hiển thị bảng điểm (1163ms)
+    Lọc Điểm
+      √  lọc theo lớp (1587ms)
+      √  lọc theo môn học (1588ms)
+    Thêm/Sửa Điểm
+      √  cho phép sửa điểm trực tiếp (1274ms)
+      √  kiểm tra tính toán điểm trung bình (2597ms)
+    Thống kê Điểm
+      √  hiển thị phần thống kê điểm (1178ms)
+
+  Xem Điểm của Sinh viên
+    √  hiển thị điểm của sinh viên (1091ms)
+    √  hiển thị thông tin GPA (1117ms)
+    √  hiển thị bảng điểm (1039ms)
+    √ Không  cho phép sửa điểm (1067ms)
+
+  Quản lý Đăng ký Học phần
+    Xem Danh sách Đăng ký
+      √  hiển thị trang đăng ký học phần (1126ms)
+      √  hiển thị bảng đăng ký (1105ms)
+    Thêm Đăng ký
+      √  mở form đăng ký học phần (1209ms)
+      √  đăng ký sinh viên vào môn học (2058ms)
+    Lọc Đăng ký
+      √  lọc theo sinh viên (1618ms)
+      √  lọc theo học kỳ (1597ms)
+
+  Xem Đăng ký của Sinh viên
+    √  hiển thị các môn học có thể đăng ký (1092ms)
+    √  hiển thị các môn đã đăng ký (1071ms)
+
+  Quyền truy cập Điểm của Giáo viên
+    √  cho phép giáo viên xem điểm (1077ms)
+    √  cho phép giáo viên nhập điểm (1076ms)
+
+
+  21 passing (29s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        21                                                                               │
+  │ Passing:      21                                                                               │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     29 seconds                                                                       │
+  │ Spec Ran:     grades-enrollment.cy.js                                                          │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  students.cy.js                                                                  (5 of 5)
+
+
+  Quản lý Sinh viên
+    Xem Danh sách Sinh viên
+      √  hiển thị trang danh sách sinh viên (1405ms)
+      √  hiển thị bảng sinh viên có dữ liệu (1184ms)
+      √  hiển thị thông tin sinh viên đầy đủ (1167ms)
+    Tìm kiếm và Lọc
+      √  lọc sinh viên theo từ khóa tìm kiếm (1966ms)
+      √  lọc theo khoa (1324ms)
+      √  lọc theo lớp (1256ms)
+    Thêm Sinh viên
+      √  mở form thêm sinh viên mới (1294ms)
+      √  kiểm tra validation các trường bắt buộc (1275ms)
+      √  thêm sinh viên mới thành công (3936ms)
+    Sửa Sinh viên
+      √  mở form sửa cho sinh viên đã chọn (1267ms)
+      √  cập nhật thông tin sinh viên thành công (2404ms)
+    Xóa Sinh viên
+      √  hiển thị hộp thoại xác nhận khi xóa (1545ms)
+    Xem Chi tiết Sinh viên
+      √  có thể click vào sinh viên để xem chi tiết (1522ms)
+    Chức năng Xuất dữ liệu
+      √  có nút xuất CSV và kích hoạt tải xuống (1575ms)
+
+
+  14 passing (24s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        14                                                                               │
+  │ Passing:      14                                                                               │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     23 seconds                                                                       │
+  │ Spec Ran:     students.cy.js                                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ √  auth.cy.js                               00:08       11       11        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ √  courses-classes.cy.js                    00:19       12       12        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ √  dashboard-reports.cy.js                  00:24       20       20        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ √  grades-enrollment.cy.js                  00:29       21       21        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ √  students.cy.js                           00:23       14       14        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    √  All specs passed!                        01:45       78       78        -        -        -  
+

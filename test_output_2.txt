@@ -1,0 +1,96 @@
+
+
+DevTools listening on ws://127.0.0.1:50359/devtools/browser/cf237b17-a21b-4635-b5d8-f3d0fcde02ac
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.4                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             │
+  │ Specs:          1 found (auth.cy.js)                                                           │
+  │ Searched:       G:\Personal Project\KiemThu\student-management-system\cypress\e2e\auth.cy.js   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  auth.cy.js                                                                      (1 of 1)
+
+
+  Kiểm thử Xác thực (Authentication)
+    Trang Đăng nhập
+      √  hiển thị form đăng nhập (481ms)
+      √  báo lỗi khi để trống thông tin đăng nhập (245ms)
+      √  báo lỗi khi nhập thông tin đăng nhập sai (775ms)
+    Đăng nhập Admin
+      1)  đăng nhập thành công với tài khoản Admin
+      √  đăng xuất thành công (1032ms)
+    Đăng nhập Giáo viên
+      2)  đăng nhập thành công với tài khoản Giáo viên
+    Đăng nhập Sinh viên
+      √  đăng nhập thành công với tài khoản Sinh viên (835ms)
+    Duy trì Phiên đăng nhập
+      √  giữ phiên đăng nhập sau khi tải lại trang (944ms)
+    Bảo vệ Route
+      √  chuyển hướng về login khi truy cập route bảo vệ mà chưa đăng nhập (239ms)
+      √  chặn sinh viên truy cập route dành cho admin (937ms)
+      √  chặn giáo viên truy cập route chỉ dành cho admin (946ms)
+
+
+  9 passing (17s)
+  2 failing
+
+  1) Kiểm thử Xác thực (Authentication)
+       Đăng nhập Admin
+          đăng nhập thành công với tài khoản Admin:
+     AssertionError: Timed out retrying after 4000ms: expected '<nav.p-4>' to contain 'Môn học'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:45:20)
+
+  2) Kiểm thử Xác thực (Authentication)
+       Đăng nhập Giáo viên
+          đăng nhập thành công với tài khoản Giáo viên:
+     AssertionError: Timed out retrying after 4000ms: expected '<nav.p-4>' to contain 'Điểm'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/auth.cy.js:70:20)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        11                                                                               │
+  │ Passing:      9                                                                                │
+  │ Failing:      2                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  2                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     16 seconds                                                                       │
+  │ Spec Ran:     auth.cy.js                                                                       │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Kiểm thử Xác thực (Authentication) -- Đăng nhập Admin --  đăng nhập thành c               
+     ông với tài khoản Admin (failed).png                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\auth.c     (1280x720)
+     y.js\Kiểm thử Xác thực (Authentication) -- Đăng nhập Giáo viên --  đăng nhập thà               
+     nh công với tài khoản Giáo viên (failed).png                                                   
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ×  auth.cy.js                               00:16       11        9        2        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ×  1 of 1 failed (100%)                     00:16       11        9        2        -        -  
+

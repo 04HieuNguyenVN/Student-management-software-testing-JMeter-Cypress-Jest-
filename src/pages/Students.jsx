@@ -351,6 +351,7 @@ const Students = () => {
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
                     required
+                    name="studentCode"
                   />
                 </div>
 
@@ -366,6 +367,7 @@ const Students = () => {
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
                     required
+                    name="fullName"
                   />
                 </div>
 
@@ -381,6 +383,7 @@ const Students = () => {
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
                     required
+                    name="email"
                   />
                 </div>
 
@@ -395,6 +398,7 @@ const Students = () => {
                       setFormData({ ...formData, phone: e.target.value })
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    name="phone"
                   />
                 </div>
 
@@ -409,6 +413,7 @@ const Students = () => {
                       setFormData({ ...formData, dateOfBirth: e.target.value })
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    name="dateOfBirth"
                   />
                 </div>
 
@@ -422,6 +427,7 @@ const Students = () => {
                       setFormData({ ...formData, gender: e.target.value })
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    name="gender"
                   >
                     <option value="Nam">Nam</option>
                     <option value="Nữ">Nữ</option>
@@ -441,6 +447,7 @@ const Students = () => {
                       })
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    name="departmentId"
                   >
                     <option value="">Chọn khoa</option>
                     {MOCK_DEPARTMENTS.map((dept) => (
@@ -464,6 +471,7 @@ const Students = () => {
                       })
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    name="classId"
                   >
                     <option value="">Chọn lớp</option>
                     {MOCK_CLASSES.map((cls) => (
@@ -485,6 +493,7 @@ const Students = () => {
                     }
                     rows="3"
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    name="address"
                   />
                 </div>
               </div>

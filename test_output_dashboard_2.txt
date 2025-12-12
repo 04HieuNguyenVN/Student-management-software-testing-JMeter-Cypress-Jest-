@@ -1,0 +1,126 @@
+
+
+DevTools listening on ws://127.0.0.1:50652/devtools/browser/4190831b-769d-4dec-8cb0-7a64bf9d60ac
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.4                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             │
+  │ Specs:          1 found (dashboard-reports.cy.js)                                              │
+  │ Searched:       G:\Personal Project\KiemThu\student-management-system\cypress\e2e\dashboard-re │
+  │                 ports.cy.js                                                                    │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  dashboard-reports.cy.js                                                         (1 of 1)
+
+
+  Dashboard
+    Dashboard Admin
+      √  hiển thị dashboard admin với thống kê (1178ms)
+      √  hiển thị các thẻ tổng hợp (746ms)
+      √  hiển thị nội dung dashboard (725ms)
+    Dashboard Giáo viên
+      √  hiển thị dashboard giáo viên (709ms)
+      √  hiển thị thông tin dành cho giáo viên (739ms)
+    Dashboard Sinh viên
+      √  hiển thị dashboard sinh viên (723ms)
+      √  hiển thị GPA và thông tin học tập (783ms)
+
+  Báo cáo
+    Trang Báo cáo
+      √  hiển thị trang báo cáo (1120ms)
+      √  có bộ chọn loại báo cáo (1123ms)
+    Báo cáo Sinh viên
+      √  hiển thị danh sách sinh viên trong báo cáo (1524ms)
+      1)  lọc theo khoa
+      2)  lọc theo lớp
+    Báo cáo Điểm
+      √  tạo báo cáo tổng hợp điểm (1569ms)
+      3)  hiển thị thống kê
+    Xuất Báo cáo
+      √  có các nút điều khiển trên trang (1209ms)
+
+  Cài đặt
+    √  hiển thị trang cài đặt chỉ dành cho admin (1250ms)
+    √  hiển thị các tab cài đặt (1186ms)
+    √  có nút lưu cài đặt (1089ms)
+
+  Điều hướng
+    √  điều hướng giữa các trang bằng sidebar (2022ms)
+    4)  đánh dấu menu đang active
+
+
+  16 passing (40s)
+  4 failing
+
+  1) Báo cáo
+       Báo cáo Sinh viên
+          lọc theo khoa:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:85:9)
+
+  2) Báo cáo
+       Báo cáo Sinh viên
+          lọc theo lớp:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:91:9)
+
+  3) Báo cáo
+       Báo cáo Điểm
+          hiển thị thống kê:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Biểu đồ phân bố điểm' within the element: <div.bg-blue-600.h-2.rounded-full> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:105:53)
+
+  4) Điều hướng
+        đánh dấu menu đang active:
+     AssertionError: Timed out retrying after 4000ms: expected '<a.flex.items-center.space-x-3.p-3.rounded.hover:bg-blue-700.transition-colors>' to have class 'bg-blue-700'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:157:38)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        20                                                                               │
+  │ Passing:      16                                                                               │
+  │ Failing:      4                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  4                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     39 seconds                                                                       │
+  │ Spec Ran:     dashboard-reports.cy.js                                                          │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Báo cáo -- Báo cáo Sinh viên --  lọc theo khoa (failed).png                  
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Báo cáo -- Báo cáo Sinh viên --  lọc theo lớp (failed).png                   
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Báo cáo -- Báo cáo Điểm --  hiển thị thống kê (failed).png                   
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Điều hướng --  đánh dấu menu đang active (failed).png                        
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ×  dashboard-reports.cy.js                  00:39       20       16        4        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ×  1 of 1 failed (100%)                     00:39       20       16        4        -        -  
+

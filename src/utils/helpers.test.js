@@ -1,13 +1,13 @@
 import { calculateGPA, formatDate, exportToCSV } from "./helpers";
 
-describe("Helper Functions", () => {
-  describe("calculateGPA", () => {
-    test("should return 0 for empty grades", () => {
+describe("Kiểm thử các Hàm Tiện ích (Helper Functions)", () => {
+  describe("Tính điểm GPA - calculateGPA", () => {
+    test(" trả về 0 khi danh sách điểm rỗng", () => {
       expect(calculateGPA([])).toBe(0);
       expect(calculateGPA(null)).toBe(0);
     });
 
-    test("should calculate GPA correctly for mixed scores", () => {
+    test(" tính GPA chính xác với các điểm số khác nhau", () => {
       const grades = [
         { averageScore: 9.0, subject: { credits: 3 } }, // A (4.0) * 3 = 12
         { averageScore: 7.5, subject: { credits: 4 } }, // B (3.0) * 4 = 12
@@ -17,14 +17,14 @@ describe("Helper Functions", () => {
       expect(calculateGPA(grades)).toBe("3.00");
     });
 
-    test("should handle missing credits (default to 3)", () => {
+    test(" xử lý khi thiếu số tín chỉ (mặc định là 3)", () => {
       const grades = [
         { averageScore: 8.5 }, // A (4.0) * 3 = 12
       ];
       expect(calculateGPA(grades)).toBe("4.00");
     });
 
-    test("should handle failing grades", () => {
+    test(" xử lý đúng khi điểm dưới trung bình (rớt)", () => {
       const grades = [
         { averageScore: 3.0, subject: { credits: 3 } }, // F (0.0) * 3 = 0
       ];
@@ -32,18 +32,18 @@ describe("Helper Functions", () => {
     });
   });
 
-  describe("formatDate", () => {
-    test("should format date correctly", () => {
+  describe("Định dạng ngày tháng - formatDate", () => {
+    test(" định dạng ngày chính xác sang DD/MM/YYYY", () => {
       expect(formatDate("2023-01-01")).toBe("01/01/2023");
     });
 
-    test("should return empty string for null/undefined", () => {
+    test(" trả về chuỗi rỗng khi đầu vào là null hoặc undefined", () => {
       expect(formatDate(null)).toBe("");
       expect(formatDate(undefined)).toBe("");
     });
   });
 
-  describe.skip("exportToCSV", () => {
+  describe.skip("Xuất dữ liệu CSV - exportToCSV", () => {
     let createElementSpy;
     let appendChildSpy;
     let removeChildSpy;
@@ -81,14 +81,14 @@ describe("Helper Functions", () => {
       jest.restoreAllMocks();
     });
 
-    test("should not export if data is empty", () => {
+    test("Không  xuất file khi dữ liệu rỗng", () => {
       const consoleSpy = jest.spyOn(console, "warn").mockImplementation(() => {});
       exportToCSV([], "test.csv");
       expect(consoleSpy).toHaveBeenCalledWith("No data to export");
       expect(createElementSpy).not.toHaveBeenCalled();
     });
 
-    test("should create link and trigger download", () => {
+    test(" tạo link và kích hoạt tải xuống", () => {
       const data = [{ name: "Test", value: 123 }];
       exportToCSV(data, "test.csv");
       expect(createElementSpy).toHaveBeenCalledWith("a");
@@ -97,7 +97,7 @@ describe("Helper Functions", () => {
       expect(removeChildSpy).toHaveBeenCalled();
     });
 
-    test("should handle commas in data", () => {
+    test(" xử lý đúng dữ liệu chứa dấu phẩy", () => {
       const data = [{ name: "Test, Name", value: 123 }];
       exportToCSV(data, "test.csv");
       // We can't easily check the blob content here without more complex mocking,

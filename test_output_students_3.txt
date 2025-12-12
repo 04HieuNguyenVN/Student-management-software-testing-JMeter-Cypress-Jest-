@@ -1,0 +1,168 @@
+
+
+DevTools listening on ws://127.0.0.1:56861/devtools/browser/914af2a1-ca09-4013-9c91-2b941a18bfb1
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.4                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             │
+  │ Specs:          1 found (students.cy.js)                                                       │
+  │ Searched:       G:\Personal Project\KiemThu\student-management-system\cypress\e2e\students.cy. │
+  │                 js                                                                             │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  students.cy.js                                                                  (1 of 1)
+
+
+  Quản lý Sinh viên
+    Xem Danh sách Sinh viên
+      √  hiển thị trang danh sách sinh viên (1584ms)
+      √  hiển thị bảng sinh viên có dữ liệu (1215ms)
+      √  hiển thị thông tin sinh viên đầy đủ (1205ms)
+    Tìm kiếm và Lọc
+      1)  lọc sinh viên theo từ khóa tìm kiếm
+      2)  lọc theo khoa
+      √  lọc theo lớp (1334ms)
+    Thêm Sinh viên
+      √  mở form thêm sinh viên mới (1335ms)
+      √  kiểm tra validation các trường bắt buộc (1315ms)
+      3)  thêm sinh viên mới thành công
+    Sửa Sinh viên
+      4)  mở form sửa cho sinh viên đã chọn
+      √  cập nhật thông tin sinh viên thành công (2300ms)
+    Xóa Sinh viên
+      √  hiển thị hộp thoại xác nhận khi xóa (1485ms)
+    Xem Chi tiết Sinh viên
+      √  có thể click vào sinh viên để xem chi tiết (1511ms)
+    Chức năng Xuất dữ liệu
+      √  có nút xuất CSV và kích hoạt tải xuống (1614ms)
+
+
+  10 passing (40s)
+  4 failing
+
+  1) Quản lý Sinh viên
+       Tìm kiếm và Lọc
+          lọc sinh viên theo từ khóa tìm kiếm:
+     AssertionError: Timed out retrying after 4000ms: expected '<tr.hover:bg-gray-50>' to contain 'Trần'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/students.cy.js:35:22)
+      at Context.callback (http://localhost:5173/__cypress/runner/cypress_runner.js:121301:26)
+      at getRet (http://localhost:5173/__cypress/runner/cypress_runner.js:121066:20)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise.attempt.Promise.try (http://localhost:5173/__cypress/runner/cypress_runner.js:4285:29)
+      at thenFn (http://localhost:5173/__cypress/runner/cypress_runner.js:121077:66)
+      at yieldItem (http://localhost:5173/__cypress/runner/cypress_runner.js:121309:16)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Object.gotValue (http://localhost:5173/__cypress/runner/cypress_runner.js:6446:18)
+
+  2) Quản lý Sinh viên
+       Tìm kiếm và Lọc
+          lọc theo khoa:
+     CypressError: Timed out retrying after 4000ms: `cy.select()` failed because it could not find a single `<option>` with value, index, or text matching: `Khoa Công nghệ thông tin`
+
+https://on.cypress.io/select
+      at getOptions (http://localhost:5173/__cypress/runner/cypress_runner.js:115768:72)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise.attempt.Promise.try (http://localhost:5173/__cypress/runner/cypress_runner.js:4285:29)
+      at retryOptions (http://localhost:5173/__cypress/runner/cypress_runner.js:115800:70)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise.attempt.Promise.try (http://localhost:5173/__cypress/runner/cypress_runner.js:4285:29)
+      at whenStable (http://localhost:5173/__cypress/runner/cypress_runner.js:147344:68)
+      at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:147285:14)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise._settlePromiseFromHandler (http://localhost:5173/__cypress/runner/cypress_runner.js:1489:31)
+      at Promise._settlePromise (http://localhost:5173/__cypress/runner/cypress_runner.js:1546:18)
+      at Promise._settlePromise0 (http://localhost:5173/__cypress/runner/cypress_runner.js:1591:10)
+      at Promise._settlePromises (http://localhost:5173/__cypress/runner/cypress_runner.js:1671:18)
+      at Promise._fulfill (http://localhost:5173/__cypress/runner/cypress_runner.js:1615:18)
+      at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:5420:46)
+
+  3) Quản lý Sinh viên
+       Thêm Sinh viên
+          thêm sinh viên mới thành công:
+     CypressError: Timed out retrying after 4050ms: `cy.select()` failed because this element:
+
+`<select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">...</select>`
+
+is being covered by another element:
+
+`<div>...</div>`
+
+Fix this problem, or use {force: true} to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with
+      at ensureIsDescendent (http://localhost:5173/__cypress/runner/cypress_runner.js:114504:68)
+      at ensureDescendents (http://localhost:5173/__cypress/runner/cypress_runner.js:114555:5)
+      at ensureDescendentsAndScroll (http://localhost:5173/__cypress/runner/cypress_runner.js:114561:14)
+      at ensureElIsNotCovered (http://localhost:5173/__cypress/runner/cypress_runner.js:114692:5)
+      at runAllChecks (http://localhost:5173/__cypress/runner/cypress_runner.js:114891:52)
+      at retryActionability (http://localhost:5173/__cypress/runner/cypress_runner.js:114928:16)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise.attempt.Promise.try (http://localhost:5173/__cypress/runner/cypress_runner.js:4285:29)
+      at whenStable (http://localhost:5173/__cypress/runner/cypress_runner.js:147344:68)
+      at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:147285:14)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise._settlePromiseFromHandler (http://localhost:5173/__cypress/runner/cypress_runner.js:1489:31)
+      at Promise._settlePromise (http://localhost:5173/__cypress/runner/cypress_runner.js:1546:18)
+      at Promise._settlePromise0 (http://localhost:5173/__cypress/runner/cypress_runner.js:1591:10)
+      at Promise._settlePromises (http://localhost:5173/__cypress/runner/cypress_runner.js:1671:18)
+      at Promise._fulfill (http://localhost:5173/__cypress/runner/cypress_runner.js:1615:18)
+      at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:5420:46)
+
+  4) Quản lý Sinh viên
+       Sửa Sinh viên
+          mở form sửa cho sinh viên đã chọn:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h2.text-2xl.font-semibold.text-gray-800>, 1 more... ]' to contain 'Chỉnh sửa sinh viên'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/students.cy.js:88:19)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        14                                                                               │
+  │ Passing:      10                                                                               │
+  │ Failing:      4                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  4                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     40 seconds                                                                       │
+  │ Spec Ran:     students.cy.js                                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quản lý Sinh viên -- Tìm kiếm và Lọc --  lọc sinh viên theo từ khóa tìm               
+      kiếm (failed).png                                                                             
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quản lý Sinh viên -- Tìm kiếm và Lọc --  lọc theo khoa (failed).png                   
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quản lý Sinh viên -- Thêm Sinh viên --  thêm sinh viên mới thành công (               
+     failed).png                                                                                    
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quản lý Sinh viên -- Sửa Sinh viên --  mở form sửa cho sinh viên đã chọ               
+     n (failed).png                                                                                 
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ×  students.cy.js                           00:40       14       10        4        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ×  1 of 1 failed (100%)                     00:40       14       10        4        -        -  
+

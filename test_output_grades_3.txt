@@ -1,0 +1,124 @@
+
+
+DevTools listening on ws://127.0.0.1:54616/devtools/browser/c30c5ddf-7a6e-43fb-adec-6f6bcbc3d501
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.4                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             │
+  │ Specs:          1 found (grades-enrollment.cy.js)                                              │
+  │ Searched:       G:\Personal Project\KiemThu\student-management-system\cypress\e2e\grades-enrol │
+  │                 lment.cy.js                                                                    │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  grades-enrollment.cy.js                                                         (1 of 1)
+
+
+  Quản lý Điểm
+    Xem Danh sách Điểm
+      √  hiển thị trang điểm (1630ms)
+      √  hiển thị bảng điểm (1194ms)
+    Lọc Điểm
+      √  lọc theo lớp (1683ms)
+      √  lọc theo môn học (1686ms)
+    Thêm/Sửa Điểm
+      1)  cho phép sửa điểm trực tiếp
+      2)  kiểm tra tính toán điểm trung bình
+    Thống kê Điểm
+      √  hiển thị phần thống kê điểm (1176ms)
+
+  Xem Điểm của Sinh viên
+    √  hiển thị điểm của sinh viên (1134ms)
+    √  hiển thị thông tin GPA (1111ms)
+    √  hiển thị bảng điểm (1107ms)
+    √ Không  cho phép sửa điểm (1078ms)
+
+  Quản lý Đăng ký Học phần
+    Xem Danh sách Đăng ký
+      √  hiển thị trang đăng ký học phần (1156ms)
+      √  hiển thị bảng đăng ký (1200ms)
+    Thêm Đăng ký
+      √  mở form đăng ký học phần (1275ms)
+      √  đăng ký sinh viên vào môn học (2111ms)
+    Lọc Đăng ký
+      √  lọc theo sinh viên (1624ms)
+      √  lọc theo học kỳ (1613ms)
+
+  Xem Đăng ký của Sinh viên
+    √  hiển thị các môn học có thể đăng ký (1104ms)
+    √  hiển thị các môn đã đăng ký (1137ms)
+
+  Quyền truy cập Điểm của Giáo viên
+    √  cho phép giáo viên xem điểm (1096ms)
+    3)  cho phép giáo viên nhập điểm
+
+
+  18 passing (41s)
+  3 failing
+
+  1) Quản lý Điểm
+       Thêm/Sửa Điểm
+          cho phép sửa điểm trực tiếp:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sửa' within the element: <button.text-blue-600.hover:text-blue-900> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/grades-enrollment.cy.js:39:23)
+
+  2) Quản lý Điểm
+       Thêm/Sửa Điểm
+          kiểm tra tính toán điểm trung bình:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sửa' within the element: <button.text-blue-600.hover:text-blue-900> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/grades-enrollment.cy.js:44:23)
+
+  3) Quyền truy cập Điểm của Giáo viên
+        cho phép giáo viên nhập điểm:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sửa' within the element: <button.text-blue-600.hover:text-blue-900> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/grades-enrollment.cy.js:165:37)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        21                                                                               │
+  │ Passing:      18                                                                               │
+  │ Failing:      3                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  3                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     41 seconds                                                                       │
+  │ Spec Ran:     grades-enrollment.cy.js                                                          │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quản lý Điểm -- ThêmSửa Điểm --  cho phép sửa điểm trực tiếp (               
+     failed).png                                                                                    
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quản lý Điểm -- ThêmSửa Điểm --  kiểm tra tính toán điểm trung               
+      bình (failed).png                                                                             
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\grades     (1280x720)
+     -enrollment.cy.js\Quyền truy cập Điểm của Giáo viên --  cho phép giáo viên nhập                
+     điểm (failed).png                                                                              
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ×  grades-enrollment.cy.js                  00:41       21       18        3        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ×  1 of 1 failed (100%)                     00:41       21       18        3        -        -  
+

@@ -1,0 +1,187 @@
+
+
+DevTools listening on ws://127.0.0.1:50743/devtools/browser/7f15a3bc-f1e0-491c-852b-18128f103561
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.4                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             │
+  │ Specs:          1 found (students.cy.js)                                                       │
+  │ Searched:       G:\Personal Project\KiemThu\student-management-system\cypress\e2e\students.cy. │
+  │                 js                                                                             │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  students.cy.js                                                                  (1 of 1)
+
+
+  Quản lý Sinh viên
+    Xem Danh sách Sinh viên
+      1)  hiển thị trang danh sách sinh viên
+      √  hiển thị bảng sinh viên có dữ liệu (1232ms)
+      √  hiển thị thông tin sinh viên đầy đủ (1270ms)
+    Tìm kiếm và Lọc
+      2)  lọc sinh viên theo từ khóa tìm kiếm
+      3)  lọc theo khoa
+      √  lọc theo lớp (1354ms)
+    Thêm Sinh viên
+      √  mở form thêm sinh viên mới (1192ms)
+      √  kiểm tra validation các trường bắt buộc (1267ms)
+      4)  thêm sinh viên mới thành công
+    Sửa Sinh viên
+      5)  mở form sửa cho sinh viên đã chọn
+      6)  cập nhật thông tin sinh viên thành công
+    Xóa Sinh viên
+      7)  hiển thị hộp thoại xác nhận khi xóa
+    Xem Chi tiết Sinh viên
+      √  có thể click vào sinh viên để xem chi tiết (1651ms)
+    Chức năng Xuất dữ liệu
+      √  có nút xuất CSV và kích hoạt tải xuống (1686ms)
+
+
+  7 passing (49s)
+  7 failing
+
+  1) Quản lý Sinh viên
+       Xem Danh sách Sinh viên
+          hiển thị trang danh sách sinh viên:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'Quản lý Sinh viên'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/students.cy.js:14:19)
+
+  2) Quản lý Sinh viên
+       Tìm kiếm và Lọc
+          lọc sinh viên theo từ khóa tìm kiếm:
+     AssertionError: Timed out retrying after 4000ms: expected '<tr.hover:bg-gray-50>' to contain 'Nguyễn'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/students.cy.js:35:22)
+      at Context.callback (http://localhost:5173/__cypress/runner/cypress_runner.js:121301:26)
+      at getRet (http://localhost:5173/__cypress/runner/cypress_runner.js:121066:20)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise.attempt.Promise.try (http://localhost:5173/__cypress/runner/cypress_runner.js:4285:29)
+      at thenFn (http://localhost:5173/__cypress/runner/cypress_runner.js:121077:66)
+      at yieldItem (http://localhost:5173/__cypress/runner/cypress_runner.js:121309:16)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Object.gotValue (http://localhost:5173/__cypress/runner/cypress_runner.js:6446:18)
+
+  3) Quản lý Sinh viên
+       Tìm kiếm và Lọc
+          lọc theo khoa:
+     CypressError: Timed out retrying after 4000ms: `cy.select()` failed because it could not find a single `<option>` with value, index, or text matching: `CNTT`
+
+https://on.cypress.io/select
+      at getOptions (http://localhost:5173/__cypress/runner/cypress_runner.js:115768:72)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise.attempt.Promise.try (http://localhost:5173/__cypress/runner/cypress_runner.js:4285:29)
+      at retryOptions (http://localhost:5173/__cypress/runner/cypress_runner.js:115800:70)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise.attempt.Promise.try (http://localhost:5173/__cypress/runner/cypress_runner.js:4285:29)
+      at whenStable (http://localhost:5173/__cypress/runner/cypress_runner.js:147344:68)
+      at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:147285:14)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise._settlePromiseFromHandler (http://localhost:5173/__cypress/runner/cypress_runner.js:1489:31)
+      at Promise._settlePromise (http://localhost:5173/__cypress/runner/cypress_runner.js:1546:18)
+      at Promise._settlePromise0 (http://localhost:5173/__cypress/runner/cypress_runner.js:1591:10)
+      at Promise._settlePromises (http://localhost:5173/__cypress/runner/cypress_runner.js:1671:18)
+      at Promise._fulfill (http://localhost:5173/__cypress/runner/cypress_runner.js:1615:18)
+      at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:5420:46)
+
+  4) Quản lý Sinh viên
+       Thêm Sinh viên
+          thêm sinh viên mới thành công:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name="studentCode"], input#studentCode, textarea[name="studentCode"]`, but never found it.
+      at eval (webpack://student-management-system/./cypress/support/commands.js:55:9)
+  at Array.forEach (<anonymous>)
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:50:27)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  5) Quản lý Sinh viên
+       Sửa Sinh viên
+          mở form sửa cho sinh viên đã chọn:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sửa' within the element: <button.text-red-600.hover:text-red-900> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/students.cy.js:85:27)
+      at withinFn (http://localhost:5173/__cypress/runner/cypress_runner.js:136019:8)
+      at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:136100:16)
+      at __WEBPACK_DEFAULT_EXPORT__ (http://localhost:5173/__cypress/runner/cypress_runner.js:133958:10)
+      at Context.within (http://localhost:5173/__cypress/runner/cypress_runner.js:136086:67)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141671:19)
+
+  6) Quản lý Sinh viên
+       Sửa Sinh viên
+          cập nhật thông tin sinh viên thành công:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sửa' within the element: <button.text-red-600.hover:text-red-900> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/students.cy.js:95:27)
+      at withinFn (http://localhost:5173/__cypress/runner/cypress_runner.js:136019:8)
+      at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:136100:16)
+      at __WEBPACK_DEFAULT_EXPORT__ (http://localhost:5173/__cypress/runner/cypress_runner.js:133958:10)
+      at Context.within (http://localhost:5173/__cypress/runner/cypress_runner.js:136086:67)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141671:19)
+
+  7) Quản lý Sinh viên
+       Xóa Sinh viên
+          hiển thị hộp thoại xác nhận khi xóa:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Xóa' within the element: <button.text-red-600.hover:text-red-900> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/students.cy.js:113:27)
+      at withinFn (http://localhost:5173/__cypress/runner/cypress_runner.js:136019:8)
+      at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:136100:16)
+      at __WEBPACK_DEFAULT_EXPORT__ (http://localhost:5173/__cypress/runner/cypress_runner.js:133958:10)
+      at Context.within (http://localhost:5173/__cypress/runner/cypress_runner.js:136086:67)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141671:19)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        14                                                                               │
+  │ Passing:      7                                                                                │
+  │ Failing:      7                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  7                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     48 seconds                                                                       │
+  │ Spec Ran:     students.cy.js                                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quản lý Sinh viên -- Xem Danh sách Sinh viên --  hiển thị trang danh sá               
+     ch sinh viên (failed).png                                                                      
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quản lý Sinh viên -- Tìm kiếm và Lọc --  lọc sinh viên theo từ khóa tìm               
+      kiếm (failed).png                                                                             
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quản lý Sinh viên -- Tìm kiếm và Lọc --  lọc theo khoa (failed).png                   
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quản lý Sinh viên -- Thêm Sinh viên --  thêm sinh viên mới thành công (               
+     failed).png                                                                                    
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quản lý Sinh viên -- Sửa Sinh viên --  mở form sửa cho sinh viên đã chọ               
+     n (failed).png                                                                                 
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quản lý Sinh viên -- Sửa Sinh viên --  cập nhật thông tin sinh viên thà               
+     nh công (failed).png                                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quản lý Sinh viên -- Xóa Sinh viên --  hiển thị hộp thoại xác nhận khi                
+     xóa (failed).png                                                                               
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ×  students.cy.js                           00:48       14        7        7        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ×  1 of 1 failed (100%)                     00:48       14        7        7        -        -  
+

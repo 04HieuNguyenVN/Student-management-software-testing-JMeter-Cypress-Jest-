@@ -4,6 +4,7 @@ import { MOCK_SUBJECTS, MOCK_DEPARTMENTS } from "../data/mockData";
 
 const Courses = () => {
   const [subjects, setSubjects] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [currentSubject, setCurrentSubject] = useState(null);
   const [formData, setFormData] = useState({
@@ -88,8 +89,27 @@ const Courses = () => {
         </button>
       </div>
 
+      <div className="mb-6">
+        <div className="relative">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Tìm kiếm môn học..."
+            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 pl-10"
+          />
+          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <BookOpen className="text-gray-400" size={20} />
+          </div>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {subjects.map((subject) => (
+        {subjects
+          .filter((subject) =>
+            subject.name.toLowerCase().includes(searchTerm.toLowerCase())
+          )
+          .map((subject) => (
           <div
             key={subject.id}
             className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
@@ -168,6 +188,7 @@ const Courses = () => {
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
                     required
+                    name="subjectCode"
                   />
                 </div>
 
@@ -183,6 +204,7 @@ const Courses = () => {
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
                     required
+                    name="subjectName"
                   />
                 </div>
 
@@ -202,6 +224,7 @@ const Courses = () => {
                     min="1"
                     max="10"
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    name="credits"
                   />
                 </div>
 
@@ -218,6 +241,7 @@ const Courses = () => {
                       })
                     }
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    name="departmentId"
                   >
                     <option value="">Chọn khoa</option>
                     {MOCK_DEPARTMENTS.map((dept) => (
@@ -239,6 +263,7 @@ const Courses = () => {
                     }
                     rows="4"
                     className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    name="description"
                   />
                 </div>
               </div>

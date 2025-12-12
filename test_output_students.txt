@@ -1,0 +1,76 @@
+
+
+DevTools listening on ws://127.0.0.1:50624/devtools/browser/bd600a13-6838-4cff-ae91-a1c6cbfb8d1c
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.4                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             │
+  │ Specs:          1 found (students.cy.js)                                                       │
+  │ Searched:       G:\Personal Project\KiemThu\student-management-system\cypress\e2e\students.cy. │
+  │                 js                                                                             │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  students.cy.js                                                                  (1 of 1)
+
+
+  Quản lý Sinh viên
+    Xem Danh sách Sinh viên
+      1) "before each" hook for " hiển thị trang danh sách sinh viên"
+
+
+  0 passing (5s)
+  1 failing
+
+  1) Quản lý Sinh viên
+       Xem Danh sách Sinh viên
+         "before each" hook for " hiển thị trang danh sách sinh viên":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sinh viên' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Quản lý Sinh viên`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        14                                                                               │
+  │ Passing:      0                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      13                                                                               │
+  │ Screenshots:  1                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     5 seconds                                                                        │
+  │ Spec Ran:     students.cy.js                                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\studen     (1280x720)
+     ts.cy.js\Quản lý Sinh viên --  hiển thị trang danh sách sinh viên -- before each               
+      hook (failed).png                                                                             
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ×  students.cy.js                           00:05       14        -        1        -       13 │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ×  1 of 1 failed (100%)                     00:05       14        -        1        -       13  
+

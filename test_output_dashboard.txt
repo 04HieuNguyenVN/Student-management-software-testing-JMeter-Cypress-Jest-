@@ -1,0 +1,208 @@
+
+
+DevTools listening on ws://127.0.0.1:54925/devtools/browser/42a4aa88-ef4f-4f38-b209-576cc334a37d
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.4                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             │
+  │ Specs:          1 found (dashboard-reports.cy.js)                                              │
+  │ Searched:       G:\Personal Project\KiemThu\student-management-system\cypress\e2e\dashboard-re │
+  │                 ports.cy.js                                                                    │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  dashboard-reports.cy.js                                                         (1 of 1)
+
+
+  Dashboard
+    Dashboard Admin
+      1)  hiển thị dashboard admin với thống kê
+      2)  hiển thị các thẻ tổng hợp
+      √  hiển thị nội dung dashboard (750ms)
+    Dashboard Giáo viên
+      3)  hiển thị dashboard giáo viên
+      √  hiển thị thông tin dành cho giáo viên (732ms)
+    Dashboard Sinh viên
+      4)  hiển thị dashboard sinh viên
+      5)  hiển thị GPA và thông tin học tập
+
+  Báo cáo
+    Trang Báo cáo
+      6)  hiển thị trang báo cáo
+      √  có bộ chọn loại báo cáo (1226ms)
+    Báo cáo Sinh viên
+      7)  hiển thị danh sách sinh viên trong báo cáo
+      8)  lọc theo khoa
+      9)  lọc theo lớp
+    Báo cáo Điểm
+      10)  tạo báo cáo tổng hợp điểm
+      √  hiển thị thống kê (1260ms)
+    Xuất Báo cáo
+      √  có các nút điều khiển trên trang (1244ms)
+
+  Cài đặt
+    11)  hiển thị trang cài đặt chỉ dành cho admin
+    √  hiển thị các tab cài đặt (1192ms)
+    √  có nút lưu cài đặt (1244ms)
+
+  Điều hướng
+    12)  điều hướng giữa các trang bằng sidebar
+    13)  đánh dấu menu đang active
+
+
+  7 passing (1m)
+  13 failing
+
+  1) Dashboard
+       Dashboard Admin
+          hiển thị dashboard admin với thống kê:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:13:19)
+
+  2) Dashboard
+       Dashboard Admin
+          hiển thị các thẻ tổng hợp:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Tổng số' within the element: <div.ml-3> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:17:40)
+
+  3) Dashboard
+       Dashboard Giáo viên
+          hiển thị dashboard giáo viên:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:34:19)
+
+  4) Dashboard
+       Dashboard Sinh viên
+          hiển thị dashboard sinh viên:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'Dashboard'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:50:19)
+
+  5) Dashboard
+       Dashboard Sinh viên
+          hiển thị GPA và thông tin học tập:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'GPA' within the element: <div.flex.justify-between.border-b.pb-2> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:54:36)
+
+  6) Báo cáo
+       Trang Báo cáo
+          hiển thị trang báo cáo:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'Báo cáo và Thống kê'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:69:19)
+
+  7) Báo cáo
+       Báo cáo Sinh viên
+          hiển thị danh sách sinh viên trong báo cáo:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Danh sách sinh viên' within the element: <button.px-4.py-2.rounded-lg.flex.items-center.space-x-2.whitespace-nowrap.bg-gray-200.text-gray-700.hover:bg-gray-300> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:79:23)
+
+  8) Báo cáo
+       Báo cáo Sinh viên
+          lọc theo khoa:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:85:9)
+
+  9) Báo cáo
+       Báo cáo Sinh viên
+          lọc theo lớp:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `select`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:91:9)
+
+  10) Báo cáo
+       Báo cáo Điểm
+          tạo báo cáo tổng hợp điểm:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Báo cáo điểm' within the element: <button.px-4.py-2.rounded-lg.flex.items-center.space-x-2.whitespace-nowrap.bg-gray-200.text-gray-700.hover:bg-gray-300> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:99:23)
+
+  11) Cài đặt
+        hiển thị trang cài đặt chỉ dành cho admin:
+     AssertionError: Timed out retrying after 4000ms: expected '[ <h1.text-xl.font-bold>, 1 more... ]' to contain 'Cài đặt Hệ thống'
+      at Context.eval (webpack://student-management-system/./cypress/e2e/dashboard-reports.cy.js:126:17)
+
+  12) Điều hướng
+        điều hướng giữa các trang bằng sidebar:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sinh viên' within the element: <nav.p-4> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  13) Điều hướng
+        đánh dấu menu đang active:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sinh viên' within the element: <nav.p-4> but never did.
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        20                                                                               │
+  │ Passing:      7                                                                                │
+  │ Failing:      13                                                                               │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  13                                                                               │
+  │ Video:        false                                                                            │
+  │ Duration:     1 minute, 15 seconds                                                             │
+  │ Spec Ran:     dashboard-reports.cy.js                                                          │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Dashboard Admin --  hiển thị dashboard admin với                
+     thống kê (failed).png                                                                          
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Dashboard Admin --  hiển thị các thẻ tổng hợp (fa               
+     iled).png                                                                                      
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Dashboard Giáo viên --  hiển thị dashboard giáo v               
+     iên (failed).png                                                                               
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Dashboard Sinh viên --  hiển thị dashboard sinh v               
+     iên (failed).png                                                                               
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Dashboard -- Dashboard Sinh viên --  hiển thị GPA và thông tin               
+      học tập (failed).png                                                                          
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Báo cáo -- Trang Báo cáo --  hiển thị trang báo cáo (failed).p               
+     ng                                                                                             
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Báo cáo -- Báo cáo Sinh viên --  hiển thị danh sách sinh viên                
+     trong báo cáo (failed).png                                                                     
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Báo cáo -- Báo cáo Sinh viên --  lọc theo khoa (failed).png                  
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Báo cáo -- Báo cáo Sinh viên --  lọc theo lớp (failed).png                   
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Báo cáo -- Báo cáo Điểm --  tạo báo cáo tổng hợp điểm (failed)               
+     .png                                                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Cài đặt --  hiển thị trang cài đặt chỉ dành cho admin (failed)               
+     .png                                                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Điều hướng --  điều hướng giữa các trang bằng sidebar (failed)               
+     .png                                                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\dashbo     (1280x720)
+     ard-reports.cy.js\Điều hướng --  đánh dấu menu đang active (failed).png                        
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ×  dashboard-reports.cy.js                  01:15       20        7       13        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ×  1 of 1 failed (100%)                     01:15       20        7       13        -        -  
+

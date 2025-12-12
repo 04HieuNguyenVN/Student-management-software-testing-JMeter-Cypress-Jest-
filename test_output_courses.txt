@@ -1,0 +1,112 @@
+
+
+DevTools listening on ws://127.0.0.1:52387/devtools/browser/7256d7c6-75df-4597-9beb-fcc5bc2f0895
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.4                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v24.4.1 (C:\nvm4w\nodejs\node.exe)                                             │
+  │ Specs:          1 found (courses-classes.cy.js)                                                │
+  │ Searched:       G:\Personal Project\KiemThu\student-management-system\cypress\e2e\courses-clas │
+  │                 ses.cy.js                                                                      │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  courses-classes.cy.js                                                           (1 of 1)
+
+
+  Quản lý Môn học
+    Xem Danh sách Môn học
+      1) "before each" hook for " hiển thị trang môn học"
+
+  Quản lý Lớp học
+    Xem Danh sách Lớp học
+      2) "before each" hook for " hiển thị trang lớp học"
+
+  Quyền truy cập Môn học của Giáo viên
+    3)  cho phép giáo viên xem môn học
+    4)  cho phép giáo viên xem lớp học
+
+
+  0 passing (20s)
+  4 failing
+
+  1) Quản lý Môn học
+       Xem Danh sách Môn học
+         "before each" hook for " hiển thị trang môn học":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Môn học' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Quản lý Môn học`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  2) Quản lý Lớp học
+       Xem Danh sách Lớp học
+         "before each" hook for " hiển thị trang lớp học":
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Lớp học' within the element: <nav.p-4> but never did.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Quản lý Lớp học`
+      at Context.eval (webpack://student-management-system/./cypress/support/commands.js:41:16)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:141663:43)
+
+  3) Quyền truy cập Môn học của Giáo viên
+        cho phép giáo viên xem môn học:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `table`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/courses-classes.cy.js:110:20)
+
+  4) Quyền truy cập Môn học của Giáo viên
+        cho phép giáo viên xem lớp học:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `table`, but never found it.
+      at Context.eval (webpack://student-management-system/./cypress/e2e/courses-classes.cy.js:116:20)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        12                                                                               │
+  │ Passing:      0                                                                                │
+  │ Failing:      4                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      8                                                                                │
+  │ Screenshots:  4                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     20 seconds                                                                       │
+  │ Spec Ran:     courses-classes.cy.js                                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\course     (1280x720)
+     s-classes.cy.js\Quản lý Môn học --  hiển thị trang môn học -- before each hook (               
+     failed).png                                                                                    
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\course     (1280x720)
+     s-classes.cy.js\Quản lý Lớp học --  hiển thị trang lớp học -- before each hook (               
+     failed).png                                                                                    
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\course     (1280x720)
+     s-classes.cy.js\Quyền truy cập Môn học của Giáo viên --  cho phép giáo viên xem                
+     môn học (failed).png                                                                           
+  -  G:\Personal Project\KiemThu\student-management-system\cypress\screenshots\course     (1280x720)
+     s-classes.cy.js\Quyền truy cập Môn học của Giáo viên --  cho phép giáo viên xem                
+     lớp học (failed).png                                                                           
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ×  courses-classes.cy.js                    00:20       12        -        4        -        8 │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ×  1 of 1 failed (100%)                     00:20       12        -        4        -        8  
+
